@@ -6,13 +6,13 @@
 <meta charset="UTF-8">
 
 <meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
 >
 
 <meta
-name="description"
-content="Santa Cruz Find My Dog - Helping lost and found dogs reunite with their families."
+    name="description"
+    content="Santa Cruz Find My Dog - Helping lost and found dogs reunite with their families."
 >
 
 <title>Santa Cruz Find My Dog</title>
@@ -26,31 +26,31 @@ content="Santa Cruz Find My Dog - Helping lost and found dogs reunite with their
 
 :root{
 
---bg:#E7D9C5;
---bg2:#F2E8D8;
---card:#F8F1E7;
+    --bg:#E7D9C5;
+    --bg2:#F2E8D8;
+    --card:#F8F1E7;
 
---dark:#3E3028;
---dark2:#30241D;
+    --dark:#3E3028;
+    --dark2:#30241D;
 
---brown:#6D5544;
---caramel:#B98A5A;
---tan:#D9BE9C;
+    --brown:#6D5544;
+    --caramel:#B98A5A;
+    --tan:#D9BE9C;
 
---lost:#C86750;
---found:#6E8B61;
+    --lost:#C86750;
+    --found:#6E8B61;
 
---white:#FFFFFF;
+    --white:#FFFFFF;
 
---line:rgba(62,48,40,.12);
+    --line:rgba(62,48,40,.12);
 
---shadow:
-0 16px 45px rgba(62,48,40,.12);
+    --shadow:
+    0 16px 45px rgba(62,48,40,.12);
 
---shadow-small:
-0 10px 30px rgba(62,48,40,.08);
+    --shadow-small:
+    0 10px 30px rgba(62,48,40,.08);
 
---radius:26px;
+    --radius:26px;
 
 }
 
@@ -60,27 +60,27 @@ content="Santa Cruz Find My Dog - Helping lost and found dogs reunite with their
 ========================================================= */
 
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
 
-font-family:
-Arial,
-Helvetica,
-sans-serif;
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-background:var(--bg);
+    background:var(--bg);
 
-color:var(--dark);
+    color:var(--dark);
 
-line-height:1.5;
+    line-height:1.5;
 
 }
 
@@ -88,27 +88,19 @@ button,
 input,
 select,
 textarea{
-
-font:inherit;
-
+    font:inherit;
 }
 
 button{
-
-cursor:pointer;
-
+    cursor:pointer;
 }
 
 img{
-
-max-width:100%;
-
+    max-width:100%;
 }
 
 a{
-
-color:inherit;
-
+    color:inherit;
 }
 
 
@@ -118,12 +110,12 @@ color:inherit;
 
 .container{
 
-width:min(
-1120px,
-calc(100% - 32px)
-);
+    width:min(
+        1120px,
+        calc(100% - 32px)
+    );
 
-margin:auto;
+    margin:auto;
 
 }
 
@@ -134,120 +126,120 @@ margin:auto;
 
 header{
 
-position:sticky;
+    position:sticky;
 
-top:0;
+    top:0;
 
-z-index:1000;
+    z-index:1000;
 
-background:
-rgba(231,217,197,.94);
+    background:
+    rgba(231,217,197,.94);
 
-backdrop-filter:
-blur(12px);
+    backdrop-filter:
+    blur(12px);
 
-border-bottom:
-1px solid var(--line);
+    border-bottom:
+    1px solid var(--line);
 
 }
 
 nav{
 
-min-height:74px;
+    min-height:74px;
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-justify-content:space-between;
+    justify-content:space-between;
 
-gap:24px;
+    gap:24px;
 
 }
 
 .brand{
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-gap:10px;
+    gap:10px;
 
-font-weight:800;
+    font-weight:800;
 
-text-decoration:none;
+    text-decoration:none;
 
 }
 
 .brand-icon{
 
-width:42px;
+    width:42px;
 
-height:42px;
+    height:42px;
 
-border-radius:14px;
+    border-radius:14px;
 
-display:grid;
+    display:grid;
 
-place-items:center;
+    place-items:center;
 
-background:var(--dark);
+    background:var(--dark);
 
-color:white;
+    color:white;
 
-font-size:21px;
+    font-size:21px;
 
-box-shadow:
-0 6px 15px
-rgba(62,48,40,.15);
+    box-shadow:
+    0 6px 15px
+    rgba(62,48,40,.15);
 
 }
 
 .nav-links{
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-gap:8px;
+    gap:8px;
 
 }
 
 .nav-links button{
 
-border:0;
+    border:0;
 
-background:transparent;
+    background:transparent;
 
-color:var(--dark);
+    color:var(--dark);
 
-font-weight:700;
+    font-weight:700;
 
-padding:10px 14px;
+    padding:10px 14px;
 
-border-radius:12px;
+    border-radius:12px;
 
-transition:.2s;
+    transition:.2s;
 
 }
 
 .nav-links button:hover{
 
-background:var(--bg2);
+    background:var(--bg2);
 
 }
 
 .menu-btn{
 
-display:none;
+    display:none;
 
-border:0;
+    border:0;
 
-background:transparent;
+    background:transparent;
 
-font-size:27px;
+    font-size:27px;
 
-color:var(--dark);
+    color:var(--dark);
 
 }
 
@@ -257,15 +249,11 @@ color:var(--dark);
 ========================================================= */
 
 .page{
-
-display:none;
-
+    display:none;
 }
 
 .page.active{
-
-display:block;
-
+    display:block;
 }
 
 
@@ -275,84 +263,82 @@ display:block;
 
 .hero{
 
-min-height:650px;
+    min-height:650px;
 
-display:grid;
+    display:grid;
 
-grid-template-columns:
-1.05fr
-.95fr;
+    grid-template-columns:
+    1.05fr
+    .95fr;
 
-gap:58px;
+    gap:58px;
 
-align-items:center;
+    align-items:center;
 
-padding:75px 0;
+    padding:75px 0;
 
 }
 
 .eyebrow{
 
-display:inline-block;
+    display:inline-block;
 
-font-size:12px;
+    font-size:12px;
 
-font-weight:900;
+    font-weight:900;
 
-letter-spacing:.15em;
+    letter-spacing:.15em;
 
-text-transform:uppercase;
+    text-transform:uppercase;
 
-color:var(--brown);
+    color:var(--brown);
 
-margin-bottom:12px;
+    margin-bottom:12px;
 
 }
 
 .hero h1{
 
-font-family:
-Georgia,
-serif;
+    font-family:
+    Georgia,
+    serif;
 
-font-size:
-clamp(52px,7vw,94px);
+    font-size:
+    clamp(52px,7vw,94px);
 
-line-height:.98;
+    line-height:.98;
 
-margin-bottom:22px;
+    margin-bottom:22px;
 
-letter-spacing:-.04em;
+    letter-spacing:-.04em;
 
 }
 
 .hero h1 span{
-
-color:var(--caramel);
-
+    color:var(--caramel);
 }
 
 .hero p{
 
-max-width:590px;
+    max-width:590px;
 
-font-size:18px;
+    font-size:18px;
 
-line-height:1.7;
+    line-height:1.7;
 
-color:#6f6156;
+    color:#6f6156;
 
 }
 
 .hero-actions{
 
-display:flex;
+    display:flex;
 
-flex-wrap:wrap;
+    flex-wrap:wrap;
 
-gap:12px;
+    gap:12px;
 
-margin-top:28px;
+    margin-top:28px;
 
 }
 
@@ -363,157 +349,157 @@ margin-top:28px;
 
 .btn{
 
-border:0;
+    border:0;
 
-border-radius:16px;
+    border-radius:16px;
 
-padding:15px 20px;
+    padding:15px 20px;
 
-font-weight:800;
+    font-weight:800;
 
-transition:
-transform .2s,
-box-shadow .2s,
-opacity .2s;
+    transition:
+    transform .2s,
+    box-shadow .2s,
+    opacity .2s;
 
 }
 
 .btn:hover{
 
-transform:
-translateY(-2px);
+    transform:
+    translateY(-2px);
 
 }
 
 .btn:active{
 
-transform:
-translateY(0);
+    transform:
+    translateY(0);
 
 }
 
 .btn-primary{
 
-background:var(--dark);
+    background:var(--dark);
 
-color:white;
+    color:white;
 
-box-shadow:
-0 10px 28px
-rgba(62,48,40,.2);
+    box-shadow:
+    0 10px 28px
+    rgba(62,48,40,.2);
 
 }
 
 .btn-primary:hover{
 
-box-shadow:
-0 14px 34px
-rgba(62,48,40,.28);
+    box-shadow:
+    0 14px 34px
+    rgba(62,48,40,.28);
 
 }
 
 .btn-secondary{
 
-background:var(--bg2);
+    background:var(--bg2);
 
-color:var(--dark);
+    color:var(--dark);
 
-border:
-1px solid var(--line);
+    border:
+    1px solid var(--line);
 
 }
 
 
 /* =========================================================
    HERO IMAGE
+   dgs.webp ONLY APPEARS HERE
 ========================================================= */
 
 .hero-card{
 
-background:var(--card);
+    background:var(--card);
 
-padding:18px;
+    padding:18px;
 
-border-radius:34px;
+    border-radius:34px;
 
-box-shadow:var(--shadow);
+    box-shadow:var(--shadow);
 
-position:relative;
+    position:relative;
 
 }
 
 .dog-visual{
 
-aspect-ratio:4/3;
+    aspect-ratio:4/3;
 
-border-radius:24px;
+    border-radius:24px;
 
-overflow:hidden;
+    overflow:hidden;
 
-position:relative;
+    position:relative;
 
-background:
+    background:
 
-linear-gradient(
-145deg,
-#D8C2A5,
-#F1E7D7
-);
+    linear-gradient(
+        145deg,
+        #D8C2A5,
+        #F1E7D7
+    );
 
 }
 
 .dog-image{
 
-width:100%;
+    width:100%;
 
-height:100%;
+    height:100%;
 
-object-fit:cover;
+    object-fit:cover;
 
-display:block;
+    display:block;
 
-border-radius:24px;
+    border-radius:24px;
 
-transition:
-transform .5s ease;
+    transition:
+    transform .5s ease;
 
 }
 
-.hero-card:hover
-.dog-image{
+.hero-card:hover .dog-image{
 
-transform:
-scale(1.04);
+    transform:
+    scale(1.04);
 
 }
 
 .hero-tag{
 
-position:absolute;
+    position:absolute;
 
-left:50%;
+    left:50%;
 
-bottom:-18px;
+    bottom:-18px;
 
-transform:
-translateX(-50%);
+    transform:
+    translateX(-50%);
 
-background:var(--bg2);
+    background:var(--bg2);
 
-border:
-1px solid var(--line);
+    border:
+    1px solid var(--line);
 
-padding:10px 18px;
+    padding:10px 18px;
 
-border-radius:999px;
+    border-radius:999px;
 
-font-weight:800;
+    font-weight:800;
 
-white-space:nowrap;
+    white-space:nowrap;
 
-box-shadow:
-0 8px 20px
-rgba(62,48,40,.08);
+    box-shadow:
+    0 8px 20px
+    rgba(62,48,40,.08);
 
 }
 
@@ -524,102 +510,102 @@ rgba(62,48,40,.08);
 
 .quick-grid{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:
-repeat(3,1fr);
+    grid-template-columns:
+    repeat(3,1fr);
 
-gap:20px;
+    gap:20px;
 
-margin-bottom:78px;
+    margin-bottom:78px;
 
 }
 
 .quick-card{
 
-background:var(--card);
+    background:var(--card);
 
-border:
-1px solid var(--line);
+    border:
+    1px solid var(--line);
 
-border-radius:var(--radius);
+    border-radius:var(--radius);
 
-padding:28px;
+    padding:28px;
 
-box-shadow:var(--shadow-small);
+    box-shadow:var(--shadow-small);
 
-transition:
-transform .2s,
-box-shadow .2s;
+    transition:
+    transform .2s,
+    box-shadow .2s;
 
 }
 
 .quick-card:hover{
 
-transform:
-translateY(-5px);
+    transform:
+    translateY(-5px);
 
-box-shadow:var(--shadow);
+    box-shadow:var(--shadow);
 
 }
 
 .quick-icon{
 
-width:56px;
+    width:56px;
 
-height:56px;
+    height:56px;
 
-display:grid;
+    display:grid;
 
-place-items:center;
+    place-items:center;
 
-border-radius:18px;
+    border-radius:18px;
 
-background:var(--bg2);
+    background:var(--bg2);
 
-font-size:27px;
+    font-size:27px;
 
-margin-bottom:18px;
+    margin-bottom:18px;
 
 }
 
 .quick-card h2{
 
-font-family:
-Georgia,
-serif;
+    font-family:
+    Georgia,
+    serif;
 
-margin-bottom:10px;
+    margin-bottom:10px;
 
 }
 
 .quick-card p{
 
-color:#75665b;
+    color:#75665b;
 
-line-height:1.6;
+    line-height:1.6;
 
-min-height:76px;
+    min-height:76px;
 
 }
 
 .text-link{
 
-border:0;
+    border:0;
 
-background:transparent;
+    background:transparent;
 
-padding:0;
+    padding:0;
 
-color:var(--dark);
+    color:var(--dark);
 
-font-weight:800;
+    font-weight:800;
 
 }
 
 .text-link:hover{
 
-text-decoration:underline;
+    text-decoration:underline;
 
 }
 
@@ -630,144 +616,145 @@ text-decoration:underline;
 
 .how{
 
-background:var(--dark);
+    background:var(--dark);
 
-color:white;
+    color:white;
 
-padding:78px 0;
+    padding:78px 0;
 
 }
 
 .section-title{
 
-font-family:
-Georgia,
-serif;
+    font-family:
+    Georgia,
+    serif;
 
-font-size:
-clamp(36px,5vw,56px);
+    font-size:
+    clamp(36px,5vw,56px);
 
-margin-bottom:8px;
+    margin-bottom:8px;
 
 }
 
 .how .eyebrow{
 
-color:var(--tan);
+    color:var(--tan);
 
 }
 
 .steps{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:
-repeat(5,1fr);
+    grid-template-columns:
+    repeat(5,1fr);
 
-gap:14px;
+    gap:14px;
 
-margin-top:34px;
+    margin-top:34px;
 
 }
 
 .step{
 
-background:
-rgba(255,255,255,.07);
+    background:
+    rgba(255,255,255,.07);
 
-border:
-1px solid
-rgba(255,255,255,.1);
+    border:
+    1px solid
+    rgba(255,255,255,.1);
 
-border-radius:20px;
+    border-radius:20px;
 
-padding:20px;
+    padding:20px;
 
-min-height:190px;
+    min-height:190px;
 
-transition:
-transform .2s,
-background .2s;
+    transition:
+    transform .2s,
+    background .2s;
 
 }
 
 .step:hover{
 
-transform:
-translateY(-4px);
+    transform:
+    translateY(-4px);
 
-background:
-rgba(255,255,255,.1);
+    background:
+    rgba(255,255,255,.1);
 
 }
 
 .step .num{
 
-width:30px;
+    width:30px;
 
-height:30px;
+    height:30px;
 
-display:grid;
+    display:grid;
 
-place-items:center;
+    place-items:center;
 
-border-radius:50%;
+    border-radius:50%;
 
-background:var(--caramel);
+    background:var(--caramel);
 
-font-weight:800;
+    font-weight:800;
 
-margin-bottom:22px;
+    margin-bottom:22px;
 
 }
 
 .step .emoji{
 
-font-size:26px;
+    font-size:26px;
 
-margin-bottom:12px;
+    margin-bottom:12px;
 
 }
 
 .step h3{
 
-margin-bottom:8px;
+    margin-bottom:8px;
 
 }
 
 .step p{
 
-color:
-rgba(255,255,255,.66);
+    color:
+    rgba(255,255,255,.66);
 
-font-size:14px;
+    font-size:14px;
 
-line-height:1.5;
+    line-height:1.5;
 
 }
 
 
 /* =========================================================
-   RECENT
+   RECENT REPORTS
+   NO IMAGE HERE
 ========================================================= */
 
 .recent{
 
-padding:78px 0 95px;
+    padding:78px 0 95px;
 
 }
 
 .heading-row{
 
-display:flex;
+    display:flex;
 
-align-items:flex-end;
+    align-items:flex-end;
 
-justify-content:space-between;
+    justify-content:space-between;
 
-gap:20px;
+    gap:20px;
 
-margin-bottom:26px;
+    margin-bottom:26px;
 
 }
 
@@ -778,155 +765,155 @@ margin-bottom:26px;
 
 .page-shell{
 
-padding:66px 0 95px;
+    padding:66px 0 95px;
 
-min-height:75vh;
+    min-height:75vh;
 
 }
 
 .page-heading h1{
 
-font-family:
-Georgia,
-serif;
+    font-family:
+    Georgia,
+    serif;
 
-font-size:
-clamp(48px,6vw,76px);
+    font-size:
+    clamp(48px,6vw,76px);
 
-margin-bottom:10px;
+    margin-bottom:10px;
 
 }
 
 .page-heading p{
 
-color:#75665b;
+    color:#75665b;
 
-font-size:17px;
+    font-size:17px;
 
 }
 
 
 /* =========================================================
-   FILTER
+   FILTERS
 ========================================================= */
 
 .filter-panel{
 
-background:var(--card);
+    background:var(--card);
 
-border:
-1px solid var(--line);
+    border:
+    1px solid var(--line);
 
-border-radius:24px;
+    border-radius:24px;
 
-padding:20px;
+    padding:20px;
 
-display:grid;
+    display:grid;
 
-grid-template-columns:
-1.4fr
-1fr
-.8fr;
+    grid-template-columns:
+    1.4fr
+    1fr
+    .8fr;
 
-gap:16px;
+    gap:16px;
 
-align-items:end;
+    align-items:end;
 
-box-shadow:var(--shadow-small);
+    box-shadow:var(--shadow-small);
 
-margin:30px 0 22px;
+    margin:30px 0 22px;
 
 }
 
 .filter-label{
 
-display:block;
+    display:block;
 
-font-size:12px;
+    font-size:12px;
 
-font-weight:800;
+    font-weight:800;
 
-color:var(--brown);
+    color:var(--brown);
 
-margin-bottom:8px;
+    margin-bottom:8px;
 
-text-transform:uppercase;
+    text-transform:uppercase;
 
-letter-spacing:.08em;
+    letter-spacing:.08em;
 
 }
 
 .search-box{
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-gap:10px;
+    gap:10px;
 
-height:48px;
+    height:48px;
 
-background:var(--bg2);
+    background:var(--bg2);
 
-border-radius:14px;
+    border-radius:14px;
 
-padding:0 14px;
+    padding:0 14px;
 
 }
 
 .search-box input{
 
-flex:1;
+    flex:1;
 
-border:0;
+    border:0;
 
-outline:0;
+    outline:0;
 
-background:transparent;
+    background:transparent;
 
 }
 
 .filter-buttons{
 
-display:flex;
+    display:flex;
 
-gap:7px;
+    gap:7px;
 
-flex-wrap:wrap;
+    flex-wrap:wrap;
 
 }
 
 .filter-btn{
 
-border:
-1px solid var(--line);
+    border:
+    1px solid var(--line);
 
-background:var(--bg2);
+    background:var(--bg2);
 
-color:var(--dark);
+    color:var(--dark);
 
-padding:10px 12px;
+    padding:10px 12px;
 
-border-radius:12px;
+    border-radius:12px;
 
-font-weight:800;
+    font-weight:800;
 
-transition:.2s;
+    transition:.2s;
 
 }
 
 .filter-btn:hover{
 
-transform:
-translateY(-1px);
+    transform:
+    translateY(-1px);
 
 }
 
 .filter-btn.active{
 
-background:var(--dark);
+    background:var(--dark);
 
-color:white;
+    color:white;
 
 }
 
@@ -934,20 +921,20 @@ select,
 input,
 textarea{
 
-width:100%;
+    width:100%;
 
-background:var(--bg2);
+    background:var(--bg2);
 
-border:
-1px solid var(--line);
+    border:
+    1px solid var(--line);
 
-border-radius:14px;
+    border-radius:14px;
 
-padding:13px 14px;
+    padding:13px 14px;
 
-color:var(--dark);
+    color:var(--dark);
 
-outline:none;
+    outline:none;
 
 }
 
@@ -955,214 +942,226 @@ select:focus,
 input:focus,
 textarea:focus{
 
-border-color:
-var(--caramel);
+    border-color:
+    var(--caramel);
 
-box-shadow:
-0 0 0 3px
-rgba(185,138,90,.12);
+    box-shadow:
+    0 0 0 3px
+    rgba(185,138,90,.12);
 
 }
 
 .results-row{
 
-display:flex;
+    display:flex;
 
-justify-content:space-between;
+    justify-content:space-between;
 
-align-items:center;
+    align-items:center;
 
-margin:16px 2px 22px;
+    margin:16px 2px 22px;
 
-color:var(--brown);
+    color:var(--brown);
 
 }
 
 
 /* =========================================================
    DOG GRID
+   Cards have NO images
 ========================================================= */
 
 .dog-grid{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:
-repeat(3,1fr);
+    grid-template-columns:
+    repeat(3,1fr);
 
-gap:22px;
+    gap:22px;
 
 }
 
 .dog-card{
 
-background:var(--card);
+    background:var(--card);
 
-border:
-1px solid var(--line);
+    border:
+    1px solid var(--line);
 
-border-radius:24px;
+    border-radius:24px;
 
-overflow:hidden;
+    overflow:hidden;
 
-box-shadow:
-0 12px 32px
-rgba(62,48,40,.08);
+    box-shadow:
+    0 12px 32px
+    rgba(62,48,40,.08);
 
-transition:
-transform .2s,
-box-shadow .2s;
+    transition:
+    transform .2s,
+    box-shadow .2s;
 
 }
 
 .dog-card:hover{
 
-transform:
-translateY(-5px);
+    transform:
+    translateY(-5px);
 
-box-shadow:var(--shadow);
-
-}
-
-.dog-photo{
-
-aspect-ratio:4/3;
-
-overflow:hidden;
-
-background:
-linear-gradient(
-145deg,
-#D9C3A6,
-#F0E4D3
-);
-
-}
-
-.dog-card-image{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-display:block;
-
-transition:
-transform .4s ease;
-
-}
-
-.dog-card:hover
-.dog-card-image{
-
-transform:
-scale(1.04);
+    box-shadow:var(--shadow);
 
 }
 
 .dog-card-body{
 
-padding:20px;
+    padding:24px;
 
 }
 
 .card-top{
 
-display:flex;
+    display:flex;
 
-justify-content:space-between;
+    justify-content:space-between;
 
-align-items:flex-start;
+    align-items:flex-start;
 
-gap:10px;
+    gap:10px;
 
 }
 
 .card-top h3{
 
-font-family:
-Georgia,
-serif;
+    font-family:
+    Georgia,
+    serif;
 
-font-size:25px;
+    font-size:25px;
 
 }
 
 .badge{
 
-font-size:11px;
+    font-size:11px;
 
-font-weight:900;
+    font-weight:900;
 
-padding:7px 10px;
+    padding:7px 10px;
 
-border-radius:999px;
+    border-radius:999px;
 
-letter-spacing:.07em;
+    letter-spacing:.07em;
 
-white-space:nowrap;
+    white-space:nowrap;
 
 }
 
 .badge.lost{
 
-background:
-rgba(200,103,80,.14);
+    background:
+    rgba(200,103,80,.14);
 
-color:#a64837;
+    color:#a64837;
 
 }
 
 .badge.found{
 
-background:
-rgba(110,139,97,.15);
+    background:
+    rgba(110,139,97,.15);
 
-color:#536f48;
+    color:#536f48;
 
 }
 
 .meta{
 
-color:var(--brown);
+    color:var(--brown);
 
-font-size:14px;
+    font-size:14px;
 
-margin:12px 0;
+    margin:12px 0;
 
 }
 
 .dog-card p{
 
-color:#706157;
+    color:#706157;
 
-line-height:1.55;
+    line-height:1.55;
 
-min-height:50px;
+    min-height:50px;
 
 }
 
+
+/* =========================================================
+   BREED
+========================================================= */
+
+.breed-info{
+
+    margin-top:18px;
+
+    padding-top:16px;
+
+    border-top:
+    1px solid var(--line);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+.breed-label{
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:.12em;
+
+    color:var(--brown);
+
+}
+
+.breed-name{
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:var(--dark);
+
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
 .card-footer{
 
-display:flex;
+    display:flex;
 
-justify-content:space-between;
+    justify-content:space-between;
 
-align-items:center;
+    align-items:center;
 
-gap:10px;
+    gap:10px;
 
-margin-top:15px;
+    margin-top:20px;
 
 }
 
 .date{
 
-color:#9A8778;
+    color:#9A8778;
 
-font-size:12px;
+    font-size:12px;
 
 }
 
@@ -1173,289 +1172,255 @@ font-size:12px;
 
 .empty-state{
 
-grid-column:
-1 / -1;
+    grid-column:
+    1 / -1;
 
-text-align:center;
+    text-align:center;
 
-background:var(--card);
+    background:var(--card);
 
-border:
-1px dashed
-var(--line);
+    border:
+    1px dashed
+    var(--line);
 
-border-radius:24px;
+    border-radius:24px;
 
-padding:55px 20px;
+    padding:55px 20px;
 
 }
 
 .empty-state-icon{
 
-font-size:45px;
+    font-size:45px;
 
-margin-bottom:15px;
+    margin-bottom:15px;
 
 }
 
 .empty-state h3{
 
-font-family:
-Georgia,
-serif;
+    font-family:
+    Georgia,
+    serif;
 
-font-size:28px;
+    font-size:28px;
 
-margin-bottom:8px;
+    margin-bottom:8px;
 
 }
 
 .empty-state p{
 
-color:#75665b;
+    color:#75665b;
 
 }
 
 
 /* =========================================================
    DETAILS
+   NO IMAGE HERE
 ========================================================= */
 
 .details{
 
-display:grid;
+    background:var(--card);
 
-grid-template-columns:
-1fr
-1fr;
+    border:
+    1px solid var(--line);
 
-background:var(--card);
+    border-radius:30px;
 
-border:
-1px solid var(--line);
+    overflow:hidden;
 
-border-radius:30px;
-
-overflow:hidden;
-
-box-shadow:var(--shadow);
-
-}
-
-.details-photo{
-
-min-height:520px;
-
-overflow:hidden;
-
-background:
-linear-gradient(
-145deg,
-#D8C1A3,
-#F4E9D9
-);
-
-}
-
-.details-photo img{
-
-width:100%;
-
-height:100%;
-
-min-height:520px;
-
-object-fit:cover;
-
-display:block;
+    box-shadow:var(--shadow);
 
 }
 
 .details-info{
 
-padding:42px;
+    padding:48px;
 
 }
 
 .details-info h1{
 
-font-family:
-Georgia,
-serif;
+    font-family:
+    Georgia,
+    serif;
 
-font-size:56px;
+    font-size:64px;
 
-margin:12px 0 26px;
+    margin:12px 0 26px;
 
 }
 
 .detail-item{
 
-padding:15px 0;
+    padding:17px 0;
 
-border-bottom:
-1px solid var(--line);
+    border-bottom:
+    1px solid var(--line);
 
-line-height:1.5;
+    line-height:1.5;
 
 }
 
 .detail-item strong{
 
-display:block;
+    display:block;
 
-font-size:11px;
+    font-size:11px;
 
-letter-spacing:.1em;
+    letter-spacing:.1em;
 
-text-transform:uppercase;
+    text-transform:uppercase;
 
-color:var(--brown);
+    color:var(--brown);
 
-margin-bottom:5px;
+    margin-bottom:5px;
 
 }
 
 
 /* =========================================================
-   REPORT
+   REPORT FORM
 ========================================================= */
 
 .report-wrap{
 
-max-width:860px;
+    max-width:860px;
 
-margin:auto;
+    margin:auto;
 
 }
 
 .center{
 
-text-align:center;
+    text-align:center;
 
 }
 
 .report-form{
 
-background:var(--card);
+    background:var(--card);
 
-border:
-1px solid var(--line);
+    border:
+    1px solid var(--line);
 
-border-radius:30px;
+    border-radius:30px;
 
-padding:32px;
+    padding:32px;
 
-box-shadow:var(--shadow);
+    box-shadow:var(--shadow);
 
-margin-top:28px;
+    margin-top:28px;
 
 }
 
 .form-grid{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:
-1fr
-1fr;
+    grid-template-columns:
+    1fr
+    1fr;
 
-gap:18px;
+    gap:18px;
 
 }
 
 .full{
 
-grid-column:
-1 / -1;
+    grid-column:
+    1 / -1;
 
 }
 
 label span,
 legend{
 
-display:block;
+    display:block;
 
-font-weight:800;
+    font-weight:800;
 
-margin-bottom:8px;
+    margin-bottom:8px;
 
 }
 
 fieldset{
 
-border:0;
+    border:0;
 
-padding:0;
+    padding:0;
 
-margin:0;
+    margin:0;
 
 }
 
 .status-choice{
 
-display:flex;
+    display:flex;
 
-gap:10px;
+    gap:10px;
 
 }
 
 .status-choice label{
 
-flex:1;
+    flex:1;
 
 }
 
 .status-choice input{
 
-display:none;
+    display:none;
 
 }
 
 .status-box{
 
-display:block;
+    display:block;
 
-text-align:center;
+    text-align:center;
 
-padding:13px;
+    padding:13px;
 
-background:var(--bg2);
+    background:var(--bg2);
 
-border:
-1px solid var(--line);
+    border:
+    1px solid var(--line);
 
-border-radius:14px;
+    border-radius:14px;
 
-font-weight:800;
+    font-weight:800;
 
-cursor:pointer;
+    cursor:pointer;
 
 }
 
 .status-choice input:checked + .lost-box{
 
-outline:
-2px solid var(--lost);
+    outline:
+    2px solid var(--lost);
 
 }
 
 .status-choice input:checked + .found-box{
 
-outline:
-2px solid var(--found);
+    outline:
+    2px solid var(--found);
 
 }
 
 .form-success{
 
-color:var(--found);
+    color:var(--found);
 
 }
 
 .form-error{
 
-color:var(--lost);
+    color:var(--lost);
 
 }
 
@@ -1466,79 +1431,79 @@ color:var(--lost);
 
 footer{
 
-background:var(--dark2);
+    background:var(--dark2);
 
-color:white;
+    color:white;
 
-padding:44px 0 20px;
+    padding:44px 0 20px;
 
 }
 
 .footer-grid{
 
-display:flex;
+    display:flex;
 
-justify-content:space-between;
+    justify-content:space-between;
 
-gap:30px;
+    gap:30px;
 
-align-items:center;
+    align-items:center;
 
 }
 
 .footer-grid p{
 
-color:
-rgba(255,255,255,.62);
+    color:
+    rgba(255,255,255,.62);
 
-margin-top:12px;
+    margin-top:12px;
 
 }
 
 .footer-links{
 
-display:flex;
+    display:flex;
 
-gap:16px;
+    gap:16px;
 
-flex-wrap:wrap;
+    flex-wrap:wrap;
 
 }
 
 .footer-links button{
 
-border:0;
+    border:0;
 
-background:transparent;
+    background:transparent;
 
-color:white;
+    color:white;
 
-font-weight:700;
+    font-weight:700;
 
 }
 
 .footer-links button:hover{
 
-text-decoration:underline;
+    text-decoration:underline;
 
 }
 
 .footer-bottom{
 
-text-align:center;
+    text-align:center;
 
-padding-top:20px;
+    padding-top:20px;
 
-margin-top:25px;
+    margin-top:25px;
 
-border-top:
-1px solid
-rgba(255,255,255,.08);
+    border-top:
+    1px solid
+    rgba(255,255,255,.08);
 
-color:
-rgba(255,255,255,.58);
+    color:
+    rgba(255,255,255,.58);
 
-font-size:13px;
+    font-size:13px;
 
 }
 
@@ -1549,57 +1514,39 @@ font-size:13px;
 
 @media(max-width:900px){
 
-.hero{
+    .hero{
 
-grid-template-columns:1fr;
+        grid-template-columns:1fr;
 
-padding-top:55px;
+        padding-top:55px;
 
-}
+    }
 
-.quick-grid{
+    .quick-grid{
 
-grid-template-columns:1fr;
+        grid-template-columns:1fr;
 
-}
+    }
 
-.steps{
+    .steps{
 
-grid-template-columns:
-repeat(2,1fr);
+        grid-template-columns:
+        repeat(2,1fr);
 
-}
+    }
 
-.dog-grid{
+    .dog-grid{
 
-grid-template-columns:
-repeat(2,1fr);
+        grid-template-columns:
+        repeat(2,1fr);
 
-}
+    }
 
-.filter-panel{
+    .filter-panel{
 
-grid-template-columns:1fr;
+        grid-template-columns:1fr;
 
-}
-
-.details{
-
-grid-template-columns:1fr;
-
-}
-
-.details-photo{
-
-min-height:400px;
-
-}
-
-.details-photo img{
-
-min-height:400px;
-
-}
+    }
 
 }
 
@@ -1610,168 +1557,156 @@ min-height:400px;
 
 @media(max-width:650px){
 
-.container{
+    .container{
 
-width:
-calc(100% - 24px);
+        width:
+        calc(100% - 24px);
 
-}
+    }
 
-.menu-btn{
+    .menu-btn{
 
-display:block;
+        display:block;
 
-}
+    }
 
-.nav-links{
+    .nav-links{
 
-display:none;
+        display:none;
 
-position:absolute;
+        position:absolute;
 
-top:74px;
+        top:74px;
 
-left:12px;
+        left:12px;
 
-right:12px;
+        right:12px;
 
-background:var(--card);
+        background:var(--card);
 
-border:
-1px solid var(--line);
+        border:
+        1px solid var(--line);
 
-border-radius:18px;
+        border-radius:18px;
 
-box-shadow:var(--shadow);
+        box-shadow:var(--shadow);
 
-padding:16px;
+        padding:16px;
 
-flex-direction:column;
+        flex-direction:column;
 
-align-items:stretch;
+        align-items:stretch;
 
-}
+    }
 
-.nav-links.open{
+    .nav-links.open{
 
-display:flex;
+        display:flex;
 
-}
+    }
 
-.nav-links button{
+    .nav-links button{
 
-width:100%;
+        width:100%;
 
-text-align:left;
+        text-align:left;
 
-}
+    }
 
-.hero{
+    .hero{
 
-min-height:auto;
+        min-height:auto;
 
-padding:55px 0 80px;
+        padding:55px 0 80px;
 
-}
+    }
 
-.hero h1{
+    .hero h1{
 
-font-size:52px;
+        font-size:52px;
 
-}
+    }
 
-.hero p{
+    .hero p{
 
-font-size:16px;
+        font-size:16px;
 
-}
+    }
 
-.hero-card{
+    .hero-card{
 
-margin-top:20px;
+        margin-top:20px;
 
-}
+    }
 
-.quick-grid{
+    .quick-grid{
 
-margin-bottom:55px;
+        margin-bottom:55px;
 
-}
+    }
 
-.steps,
-.dog-grid{
+    .steps,
+    .dog-grid{
 
-grid-template-columns:1fr;
+        grid-template-columns:1fr;
 
-}
+    }
 
-.form-grid{
+    .form-grid{
 
-grid-template-columns:1fr;
+        grid-template-columns:1fr;
 
-}
+    }
 
-.full{
+    .full{
 
-grid-column:auto;
+        grid-column:auto;
 
-}
+    }
 
-.footer-grid{
+    .footer-grid{
 
-flex-direction:column;
+        flex-direction:column;
 
-align-items:flex-start;
+        align-items:flex-start;
 
-}
+    }
 
-.heading-row{
+    .heading-row{
 
-align-items:flex-start;
+        align-items:flex-start;
 
-flex-direction:column;
+        flex-direction:column;
 
-}
+    }
 
-.results-row{
+    .results-row{
 
-align-items:flex-start;
+        align-items:flex-start;
 
-gap:10px;
+        gap:10px;
 
-flex-direction:column;
+        flex-direction:column;
 
-}
+    }
 
-.details-info{
+    .details-info{
 
-padding:28px;
+        padding:30px 24px;
 
-}
+    }
 
-.details-info h1{
+    .details-info h1{
 
-font-size:44px;
+        font-size:48px;
 
-}
+    }
 
-.details-photo{
+    .report-form{
 
-min-height:330px;
+        padding:22px;
 
-}
-
-.details-photo img{
-
-min-height:330px;
-
-}
-
-.report-form{
-
-padding:22px;
-
-}
+    }
 
 }
 
@@ -1782,15 +1717,15 @@ padding:22px;
 
 @media(prefers-reduced-motion:reduce){
 
-*{
+    *{
 
-scroll-behavior:auto !important;
+        scroll-behavior:auto !important;
 
-transition:none !important;
+        transition:none !important;
 
-animation:none !important;
+        animation:none !important;
 
-}
+    }
 
 }
 
@@ -1812,51 +1747,51 @@ animation:none !important;
 
 
 <a
-href="#"
-class="brand"
-onclick="showPage('home'); return false;"
+    href="#"
+    class="brand"
+    onclick="showPage('home'); return false;"
 >
 
-<span class="brand-icon">
-🐶
-</span>
+    <span class="brand-icon">
+        🐶
+    </span>
 
-<span>
-Santa Cruz Find My Dog
-</span>
+    <span>
+        Santa Cruz Find My Dog
+    </span>
 
 </a>
 
 
 <button
-class="menu-btn"
-id="menuBtn"
-aria-label="Open navigation menu"
+    class="menu-btn"
+    id="menuBtn"
+    aria-label="Open navigation menu"
 >
-☰
+    ☰
 </button>
 
 
 <div
-class="nav-links"
-id="navLinks"
+    class="nav-links"
+    id="navLinks"
 >
 
-<button onclick="showPage('home')">
-Home
-</button>
+    <button onclick="showPage('home')">
+        Home
+    </button>
 
-<button onclick="showPage('find')">
-Find a Dog
-</button>
+    <button onclick="showPage('find')">
+        Find a Dog
+    </button>
 
-<button onclick="showPage('report')">
-Report a Dog
-</button>
+    <button onclick="showPage('report')">
+        Report a Dog
+    </button>
 
-<button onclick="goHow()">
-How It Works
-</button>
+    <button onclick="goHow()">
+        How It Works
+    </button>
 
 </div>
 
@@ -1870,12 +1805,12 @@ How It Works
 
 
 <!-- =========================================================
-     HOME
+     HOME PAGE
 ========================================================= -->
 
 <section
-id="homePage"
-class="page active"
+    id="homePage"
+    class="page active"
 >
 
 
@@ -1884,85 +1819,89 @@ class="page active"
 
 <div>
 
-<span class="eyebrow">
-Lost & Found in Santa Cruz
-</span>
+    <span class="eyebrow">
+        Lost & Found in Santa Cruz
+    </span>
 
 
-<h1>
+    <h1>
 
-Find Them.<br>
+        Find Them.<br>
 
-<span>
-Bring Them Home.
-</span>
+        <span>
+            Bring Them Home.
+        </span>
 
-</h1>
-
-
-<p>
-Helping Santa Cruz reunite lost dogs with their families.
-Search for dogs in your area or create a report.
-</p>
+    </h1>
 
 
-<div class="hero-actions">
+    <p>
+        Helping Santa Cruz reunite lost dogs with their families.
+        Search for dogs in your area or create a report.
+    </p>
 
 
-<button
-class="btn btn-primary"
-onclick="showPage('find')"
->
-🔎 Find a Dog
-</button>
+    <div class="hero-actions">
 
 
-<button
-class="btn btn-secondary"
-onclick="showPage('report')"
->
-📝 Report a Dog
-</button>
+        <button
+            class="btn btn-primary"
+            onclick="showPage('find')"
+        >
+            🔎 Find a Dog
+        </button>
 
+
+        <button
+            class="btn btn-secondary"
+            onclick="showPage('report')"
+        >
+            📝 Report a Dog
+        </button>
+
+
+    </div>
 
 </div>
 
-</div>
 
 
-
-<!-- MAIN IMAGE -->
+<!-- =====================================================
+     dgs.webp ONLY HERE
+===================================================== -->
 
 <div class="hero-card">
 
 
-<div class="dog-visual">
+    <div class="dog-visual">
 
 
-<img
-src="dgs.webp"
-alt="Dog available for adoption or reunion"
-class="dog-image"
-onerror="imageFallback(this)"
->
+        <img
+            src="dgs.webp"
+            alt="Dogs"
+            class="dog-image"
+            onerror="imageFallback(this)"
+        >
 
 
-</div>
+    </div>
 
 
-<div class="hero-tag">
-🐾 Reunions start here
-</div>
-
-
-</div>
+    <div class="hero-tag">
+        🐾 Reunions start here
+    </div>
 
 
 </div>
 
 
+</div>
 
-<!-- QUICK ACTIONS -->
+
+
+<!-- =========================================================
+     QUICK ACTIONS
+========================================================= -->
 
 <div class="container quick-grid">
 
@@ -1970,57 +1909,27 @@ onerror="imageFallback(this)"
 <article class="quick-card">
 
 
-<div class="quick-icon">
-🐕
-</div>
+    <div class="quick-icon">
+        🐕
+    </div>
 
 
-<h2>
-Lost a Dog?
-</h2>
+    <h2>
+        Lost a Dog?
+    </h2>
 
 
-<p>
-Create a report so people in Santa Cruz can help find your pet.
-</p>
+    <p>
+        Create a report so people in Santa Cruz can help find your pet.
+    </p>
 
 
-<button
-class="text-link"
-onclick="openReportWithStatus('lost')"
->
-Report Lost Dog →
-</button>
-
-
-</article>
-
-
-
-<article class="quick-card">
-
-
-<div class="quick-icon">
-🏠
-</div>
-
-
-<h2>
-Found a Dog?
-</h2>
-
-
-<p>
-Share the information so the owner has a better chance of finding their dog.
-</p>
-
-
-<button
-class="text-link"
-onclick="openReportWithStatus('found')"
->
-Report Found Dog →
-</button>
+    <button
+        class="text-link"
+        onclick="openReportWithStatus('lost')"
+    >
+        Report Lost Dog →
+    </button>
 
 
 </article>
@@ -2030,27 +1939,57 @@ Report Found Dog →
 <article class="quick-card">
 
 
-<div class="quick-icon">
-🔎
-</div>
+    <div class="quick-icon">
+        🏠
+    </div>
 
 
-<h2>
-Search by Area
-</h2>
+    <h2>
+        Found a Dog?
+    </h2>
 
 
-<p>
-Search reports from neighborhoods throughout Santa Cruz.
-</p>
+    <p>
+        Share the information so the owner has a better chance of finding their dog.
+    </p>
 
 
-<button
-class="text-link"
-onclick="showPage('find')"
->
-Search Dogs →
-</button>
+    <button
+        class="text-link"
+        onclick="openReportWithStatus('found')"
+    >
+        Report Found Dog →
+    </button>
+
+
+</article>
+
+
+
+<article class="quick-card">
+
+
+    <div class="quick-icon">
+        🔎
+    </div>
+
+
+    <h2>
+        Search by Area
+    </h2>
+
+
+    <p>
+        Search reports from neighborhoods throughout Santa Cruz.
+    </p>
+
+
+    <button
+        class="text-link"
+        onclick="showPage('find')"
+    >
+        Search Dogs →
+    </button>
 
 
 </article>
@@ -2065,136 +2004,136 @@ Search Dogs →
 ========================================================= -->
 
 <section
-class="how"
-id="howSection"
+    class="how"
+    id="howSection"
 >
 
 <div class="container">
 
 
-<span class="eyebrow">
-Simple & Fast
-</span>
+    <span class="eyebrow">
+        Simple & Fast
+    </span>
 
 
-<h2 class="section-title">
-How It Works
-</h2>
+    <h2 class="section-title">
+        How It Works
+    </h2>
 
 
-<div class="steps">
+    <div class="steps">
 
 
-<div class="step">
+        <div class="step">
 
-<div class="num">
-1
-</div>
+            <div class="num">
+                1
+            </div>
 
-<div class="emoji">
-🔎
-</div>
+            <div class="emoji">
+                🔎
+            </div>
 
-<h3>
-Find a Dog
-</h3>
+            <h3>
+                Find a Dog
+            </h3>
 
-<p>
-Browse lost and found dog reports.
-</p>
+            <p>
+                Browse lost and found dog reports.
+            </p>
 
-</div>
-
-
-
-<div class="step">
-
-<div class="num">
-2
-</div>
-
-<div class="emoji">
-📍
-</div>
-
-<h3>
-Choose an Area
-</h3>
-
-<p>
-Filter reports by neighborhood.
-</p>
-
-</div>
+        </div>
 
 
 
-<div class="step">
+        <div class="step">
 
-<div class="num">
-3
-</div>
+            <div class="num">
+                2
+            </div>
 
-<div class="emoji">
-📋
-</div>
+            <div class="emoji">
+                📍
+            </div>
 
-<h3>
-Check Details
-</h3>
+            <h3>
+                Choose an Area
+            </h3>
 
-<p>
-Open the complete dog profile.
-</p>
+            <p>
+                Filter reports by neighborhood.
+            </p>
 
-</div>
-
-
-
-<div class="step">
-
-<div class="num">
-4
-</div>
-
-<div class="emoji">
-📞
-</div>
-
-<h3>
-Contact
-</h3>
-
-<p>
-Use the contact information provided.
-</p>
-
-</div>
+        </div>
 
 
 
-<div class="step">
+        <div class="step">
 
-<div class="num">
-5
-</div>
+            <div class="num">
+                3
+            </div>
 
-<div class="emoji">
-❤️
-</div>
+            <div class="emoji">
+                📋
+            </div>
 
-<h3>
-Report a Dog
-</h3>
+            <h3>
+                Check Details
+            </h3>
 
-<p>
-Help another dog find its way home.
-</p>
+            <p>
+                Open the complete dog profile.
+            </p>
 
-</div>
+        </div>
 
 
-</div>
+
+        <div class="step">
+
+            <div class="num">
+                4
+            </div>
+
+            <div class="emoji">
+                📞
+            </div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                Use the contact information provided.
+            </p>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <div class="num">
+                5
+            </div>
+
+            <div class="emoji">
+                ❤️
+            </div>
+
+            <h3>
+                Report a Dog
+            </h3>
+
+            <p>
+                Help another dog find its way home.
+            </p>
+
+        </div>
+
+
+    </div>
 
 </div>
 
@@ -2204,42 +2143,45 @@ Help another dog find its way home.
 
 <!-- =========================================================
      RECENT REPORTS
+     NO dgs.webp HERE
 ========================================================= -->
 
-<section class="container recent">
+<section
+    class="container recent"
+>
 
 
 <div class="heading-row">
 
 
-<div>
+    <div>
 
-<span class="eyebrow">
-Latest Reports
-</span>
-
-
-<h2 class="section-title">
-Recently Reported Dogs
-</h2>
-
-</div>
+        <span class="eyebrow">
+            Latest Reports
+        </span>
 
 
-<button
-class="text-link"
-onclick="showPage('find')"
->
-View All Dogs →
-</button>
+        <h2 class="section-title">
+            Recently Reported Dogs
+        </h2>
+
+    </div>
+
+
+    <button
+        class="text-link"
+        onclick="showPage('find')"
+    >
+        View All Dogs →
+    </button>
 
 
 </div>
 
 
 <div
-class="dog-grid"
-id="recentDogs"
+    class="dog-grid"
+    id="recentDogs"
 >
 </div>
 
@@ -2256,189 +2198,186 @@ id="recentDogs"
 ========================================================= -->
 
 <section
-id="findPage"
-class="page"
+    id="findPage"
+    class="page"
 >
 
 <div class="container page-shell">
 
 
-<div class="page-heading">
+    <div class="page-heading">
 
-<span class="eyebrow">
-Lost & Found Directory
-</span>
+        <span class="eyebrow">
+            Lost & Found Directory
+        </span>
 
 
-<h1>
-Find a Dog
-</h1>
+        <h1>
+            Find a Dog
+        </h1>
 
 
-<p>
-Search lost and found dogs reported in Santa Cruz de la Sierra.
-</p>
+        <p>
+            Search lost and found dogs reported in Santa Cruz de la Sierra.
+        </p>
 
+    </div>
 
-</div>
 
 
+    <div class="filter-panel">
 
-<div class="filter-panel">
 
+        <label>
 
-<label>
+            <span class="filter-label">
+                Search
+            </span>
 
-<span class="filter-label">
-Search
-</span>
 
+            <div class="search-box">
 
-<div class="search-box">
+                <span>
+                    🔎
+                </span>
 
-<span>
-🔎
-</span>
 
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Search by name, breed, description or area..."
+                    aria-label="Search dogs"
+                >
 
-<input
-id="searchInput"
-type="search"
-placeholder="Search by dog name, description or area..."
-aria-label="Search dogs"
->
+            </div>
 
+        </label>
 
-</div>
 
-</label>
 
+        <div>
 
+            <span class="filter-label">
+                Status
+            </span>
 
-<div>
 
+            <div class="filter-buttons">
 
-<span class="filter-label">
-Status
-</span>
 
+                <button
+                    class="filter-btn active"
+                    data-status="all"
+                >
+                    All
+                </button>
 
-<div class="filter-buttons">
 
+                <button
+                    class="filter-btn"
+                    data-status="lost"
+                >
+                    🔴 Lost
+                </button>
 
-<button
-class="filter-btn active"
-data-status="all"
->
-All
-</button>
 
+                <button
+                    class="filter-btn"
+                    data-status="found"
+                >
+                    🟢 Found
+                </button>
 
-<button
-class="filter-btn"
-data-status="lost"
->
-🔴 Lost
-</button>
 
+            </div>
 
-<button
-class="filter-btn"
-data-status="found"
->
-🟢 Found
-</button>
+        </div>
 
 
-</div>
 
-</div>
+        <label>
 
+            <span class="filter-label">
+                Area
+            </span>
 
 
-<label>
+            <select
+                id="areaFilter"
+                aria-label="Filter by area"
+            >
 
-<span class="filter-label">
-Area
-</span>
+                <option value="all">
+                    All Areas
+                </option>
 
+                <option>
+                    Equipetrol
+                </option>
 
-<select
-id="areaFilter"
-aria-label="Filter by area"
->
+                <option>
+                    Urubó
+                </option>
 
-<option value="all">
-All Areas
-</option>
+                <option>
+                    Sirari
+                </option>
 
-<option>
-Equipetrol
-</option>
+                <option>
+                    Plan 3000
+                </option>
 
-<option>
-Urubó
-</option>
+                <option>
+                    Las Palmas
+                </option>
 
-<option>
-Sirari
-</option>
+                <option>
+                    Urbarí
+                </option>
 
-<option>
-Plan 3000
-</option>
+                <option>
+                    Centro
+                </option>
 
-<option>
-Las Palmas
-</option>
+                <option>
+                    Other
+                </option>
 
-<option>
-Urbarí
-</option>
+            </select>
 
-<option>
-Centro
-</option>
 
-<option>
-Other
-</option>
+        </label>
 
-</select>
 
+    </div>
 
-</label>
 
 
-</div>
+    <div class="results-row">
 
 
+        <span id="resultsCount">
+            0 reports
+        </span>
 
-<div class="results-row">
 
+        <button
+            class="text-link"
+            onclick="clearFilters()"
+        >
+            Clear filters
+        </button>
 
-<span id="resultsCount">
-0 reports
-</span>
 
+    </div>
 
-<button
-class="text-link"
-onclick="clearFilters()"
->
-Clear filters
-</button>
 
 
-</div>
-
-
-
-<div
-class="dog-grid"
-id="dogGrid"
->
-</div>
+    <div
+        class="dog-grid"
+        id="dogGrid"
+    >
+    </div>
 
 
 </div>
@@ -2449,33 +2388,34 @@ id="dogGrid"
 
 <!-- =========================================================
      DETAILS PAGE
+     NO IMAGE HERE
 ========================================================= -->
 
 <section
-id="detailsPage"
-class="page"
+    id="detailsPage"
+    class="page"
 >
 
 <div class="container page-shell">
 
 
-<button
-class="text-link"
-onclick="showPage('find')"
->
-← Back to Search
-</button>
+    <button
+        class="text-link"
+        onclick="showPage('find')"
+    >
+        ← Back to Search
+    </button>
 
 
-<br>
-<br>
+    <br>
+    <br>
 
 
-<div
-class="details"
-id="detailsBox"
->
-</div>
+    <div
+        class="details"
+        id="detailsBox"
+    >
+    </div>
 
 
 </div>
@@ -2489,287 +2429,317 @@ id="detailsBox"
 ========================================================= -->
 
 <section
-id="reportPage"
-class="page"
+    id="reportPage"
+    class="page"
 >
 
 <div class="container page-shell report-wrap">
 
 
-<div class="page-heading center">
+    <div class="page-heading center">
 
-<span class="eyebrow">
-Make a Report
-</span>
+        <span class="eyebrow">
+            Make a Report
+        </span>
 
 
-<h1>
-Report a Dog
-</h1>
+        <h1>
+            Report a Dog
+        </h1>
 
 
-<p>
-Every report can help a dog find its way home.
-</p>
+        <p>
+            Every report can help a dog find its way home.
+        </p>
 
+    </div>
 
-</div>
 
 
+    <form
+        class="report-form"
+        id="reportForm"
+    >
 
-<form
-class="report-form"
-id="reportForm"
->
 
+        <div class="form-grid">
 
-<div class="form-grid">
 
+            <!-- DOG NAME -->
 
-<label>
+            <label>
 
-<span>
-Dog Name
-</span>
+                <span>
+                    Dog Name
+                </span>
 
 
-<input
-name="name"
-type="text"
-placeholder="Dog's name, if known"
->
+                <input
+                    name="name"
+                    type="text"
+                    placeholder="Dog's name, if known"
+                >
 
+            </label>
 
-</label>
 
 
+            <!-- BREED -->
 
-<fieldset>
+            <label>
 
+                <span>
+                    Breed
+                </span>
 
-<legend>
-Status *
-</legend>
 
+                <input
+                    name="breed"
+                    type="text"
+                    placeholder="Example: Beagle, Husky, Golden Retriever"
+                >
 
-<div class="status-choice">
+            </label>
 
 
-<label>
 
-<input
-type="radio"
-name="status"
-value="lost"
-required
->
+            <!-- STATUS -->
 
+            <fieldset>
 
-<span class="status-box lost-box">
-🔴 Lost
-</span>
+                <legend>
+                    Status *
+                </legend>
 
 
-</label>
+                <div class="status-choice">
 
 
-<label>
+                    <label>
 
-<input
-type="radio"
-name="status"
-value="found"
-required
->
+                        <input
+                            type="radio"
+                            name="status"
+                            value="lost"
+                            required
+                        >
 
 
-<span class="status-box found-box">
-🟢 Found
-</span>
+                        <span class="status-box lost-box">
+                            🔴 Lost
+                        </span>
 
 
-</label>
+                    </label>
 
 
-</div>
+                    <label>
 
+                        <input
+                            type="radio"
+                            name="status"
+                            value="found"
+                            required
+                        >
 
-</fieldset>
 
+                        <span class="status-box found-box">
+                            🟢 Found
+                        </span>
 
 
-<label>
+                    </label>
 
-<span>
-Area / Neighborhood *
-</span>
 
+                </div>
 
-<select
-name="area"
-required
->
+            </fieldset>
 
-<option value="">
-Select an area
-</option>
 
-<option>
-Equipetrol
-</option>
 
-<option>
-Urubó
-</option>
+            <!-- AREA -->
 
-<option>
-Sirari
-</option>
+            <label>
 
-<option>
-Plan 3000
-</option>
+                <span>
+                    Area / Neighborhood *
+                </span>
 
-<option>
-Las Palmas
-</option>
 
-<option>
-Urbarí
-</option>
+                <select
+                    name="area"
+                    required
+                >
 
-<option>
-Centro
-</option>
+                    <option value="">
+                        Select an area
+                    </option>
 
-<option>
-Other
-</option>
+                    <option>
+                        Equipetrol
+                    </option>
 
-</select>
+                    <option>
+                        Urubó
+                    </option>
 
+                    <option>
+                        Sirari
+                    </option>
 
-</label>
+                    <option>
+                        Plan 3000
+                    </option>
 
+                    <option>
+                        Las Palmas
+                    </option>
 
+                    <option>
+                        Urbarí
+                    </option>
 
-<label>
+                    <option>
+                        Centro
+                    </option>
 
-<span>
-Date *
-</span>
+                    <option>
+                        Other
+                    </option>
 
+                </select>
 
-<input
-type="date"
-name="date"
-required
->
 
+            </label>
 
-</label>
 
 
+            <!-- DATE -->
 
-<label class="full">
+            <label>
 
-<span>
-Last Seen / Found Location *
-</span>
+                <span>
+                    Date *
+                </span>
 
 
-<input
-type="text"
-name="location"
-placeholder="Example: Near Equipetrol Plaza"
-required
->
+                <input
+                    type="date"
+                    name="date"
+                    required
+                >
 
 
-</label>
+            </label>
 
 
 
-<label class="full">
+            <!-- LOCATION -->
 
-<span>
-Description *
-</span>
+            <label class="full">
 
+                <span>
+                    Last Seen / Found Location *
+                </span>
 
-<textarea
-name="description"
-rows="5"
-placeholder="Color, size, collar, personality, distinctive features..."
-required
-></textarea>
 
+                <input
+                    type="text"
+                    name="location"
+                    placeholder="Example: Near Equipetrol Plaza"
+                    required
+                >
 
-</label>
+            </label>
 
 
 
-<label>
+            <!-- DESCRIPTION -->
 
-<span>
-Contact Name *
-</span>
+            <label class="full">
 
+                <span>
+                    Description *
+                </span>
 
-<input
-type="text"
-name="contactName"
-required
->
 
+                <textarea
+                    name="description"
+                    rows="5"
+                    placeholder="Color, size, collar, personality, distinctive features..."
+                    required
+                ></textarea>
 
-</label>
+            </label>
 
 
 
-<label>
+            <!-- CONTACT NAME -->
 
-<span>
-Phone Number *
-</span>
+            <label>
 
+                <span>
+                    Contact Name *
+                </span>
 
-<input
-type="tel"
-name="phone"
-placeholder="+591..."
-required
->
 
+                <input
+                    type="text"
+                    name="contactName"
+                    required
+                >
 
-</label>
+            </label>
 
 
-</div>
 
+            <!-- PHONE -->
 
+            <label>
 
-<button
-type="submit"
-class="btn btn-primary"
-style="width:100%;margin-top:24px"
->
-Submit Report
-</button>
+                <span>
+                    Phone Number *
+                </span>
 
 
-<p
-id="formStatus"
-style="
-text-align:center;
-font-weight:800;
-margin-top:15px;
-"
->
-</p>
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+591..."
+                    required
+                >
 
+            </label>
 
-</form>
+
+        </div>
+
+
+
+        <button
+            type="submit"
+            class="btn btn-primary"
+            style="
+                width:100%;
+                margin-top:24px
+            "
+        >
+            Submit Report
+        </button>
+
+
+        <p
+            id="formStatus"
+            style="
+                text-align:center;
+                font-weight:800;
+                margin-top:15px;
+            "
+        >
+        </p>
+
+
+    </form>
 
 
 </div>
@@ -2791,55 +2761,54 @@ margin-top:15px;
 <div class="container footer-grid">
 
 
-<div>
+    <div>
 
 
-<div
-class="brand"
-style="color:white"
->
+        <div
+            class="brand"
+            style="color:white"
+        >
 
-<span class="brand-icon">
-🐶
-</span>
-
-
-<span>
-Santa Cruz Find My Dog
-</span>
+            <span class="brand-icon">
+                🐶
+            </span>
 
 
-</div>
+            <span>
+                Santa Cruz Find My Dog
+            </span>
+
+        </div>
 
 
-<p>
-Helping Santa Cruz reunite lost dogs with their families.
-</p>
+        <p>
+            Helping Santa Cruz reunite lost dogs with their families.
+        </p>
 
 
-</div>
+    </div>
 
 
 
-<div class="footer-links">
+    <div class="footer-links">
 
 
-<button onclick="showPage('home')">
-Home
-</button>
+        <button onclick="showPage('home')">
+            Home
+        </button>
 
 
-<button onclick="showPage('find')">
-Find a Dog
-</button>
+        <button onclick="showPage('find')">
+            Find a Dog
+        </button>
 
 
-<button onclick="showPage('report')">
-Report a Dog
-</button>
+        <button onclick="showPage('report')">
+            Report a Dog
+        </button>
 
 
-</div>
+    </div>
 
 
 </div>
@@ -2848,7 +2817,7 @@ Report a Dog
 
 <div class="footer-bottom">
 
-Made with ❤️ for the dogs of Santa Cruz.
+    Made with ❤️ for the dogs of Santa Cruz.
 
 </div>
 
@@ -2860,88 +2829,94 @@ Made with ❤️ for the dogs of Santa Cruz.
 <script>
 
 /* =========================================================
-   DATA
+   DOG DATA
 ========================================================= */
 
 let dogs = [
 
-{
-id:1,
-name:"Max",
-status:"lost",
-area:"Equipetrol",
-date:"2026-08-16",
-location:"Near Equipetrol Plaza",
-description:
-"Small brown dog with a blue collar. Friendly but may be scared around strangers.",
-contactName:"Andrea",
-phone:"+591 70012345"
-},
+    {
+        id:1,
+        name:"Max",
+        breed:"French Bulldog",
+        status:"lost",
+        area:"Equipetrol",
+        date:"2026-08-15",
+        location:"Near Equipetrol Plaza",
+        description:
+        "Small brown dog with a blue collar. Friendly but may be scared around strangers.",
+        contactName:"Andrea",
+        phone:"+591 70012345"
+    },
 
-{
-id:2,
-name:"Luna",
-status:"found",
-area:"Urubó",
-date:"2026-08-17",
-location:"Residential area in Urubó",
-description:
-"White and brown female dog with a pink collar. Calm and affectionate.",
-contactName:"Carlos",
-phone:"+591 70123456"
-},
+    {
+        id:2,
+        name:"Luna",
+        breed:"Beagle",
+        status:"found",
+        area:"Urubó",
+        date:"2026-08-16",
+        location:"Residential area in Urubó",
+        description:
+        "White and brown female dog with a pink collar. Calm and affectionate.",
+        contactName:"Carlos",
+        phone:"+591 70123456"
+    },
 
-{
-id:3,
-name:"Rocky",
-status:"lost",
-area:"Sirari",
-date:"2026-08-15",
-location:"Near Sirari Park",
-description:
-"Medium-sized black and white dog with a red collar.",
-contactName:"María",
-phone:"+591 70234567"
-},
+    {
+        id:3,
+        name:"Rocky",
+        breed:"Siberian Husky",
+        status:"lost",
+        area:"Sirari",
+        date:"2026-08-14",
+        location:"Near Sirari Park",
+        description:
+        "Medium-sized black and white dog with a red collar.",
+        contactName:"María",
+        phone:"+591 70234567"
+    },
 
-{
-id:4,
-name:"Toby",
-status:"found",
-area:"Plan 3000",
-date:"2026-08-14",
-location:"Main avenue",
-description:
-"Small golden dog with a green collar. Calm and friendly.",
-contactName:"Luis",
-phone:"+591 70345678"
-},
+    {
+        id:4,
+        name:"Toby",
+        breed:"Golden Retriever",
+        status:"found",
+        area:"Plan 3000",
+        date:"2026-08-13",
+        location:"Main avenue",
+        description:
+        "Small golden dog with a green collar. Calm and friendly.",
+        contactName:"Luis",
+        phone:"+591 70345678"
+    },
 
-{
-id:5,
-name:"Coco",
-status:"lost",
-area:"Equipetrol",
-date:"2026-08-13",
-location:"Near a shopping area",
-description:
-"Small white dog with light brown spots.",
-contactName:"Sofía",
-phone:"+591 70456789"
-},
+    {
+        id:5,
+        name:"Coco",
+        breed:"Maltese",
+        status:"lost",
+        area:"Equipetrol",
+        date:"2026-08-12",
+        location:"Near a shopping area",
+        description:
+        "Small white dog with light brown spots.",
+        contactName:"Sofía",
+        phone:"+591 70456789"
+    },
 
-{
-id:6,
-name:"Bella",
-status:"found",
-area:"Sirari",
-date:"2026-08-12",
-location:"Neighborhood park",
-description:
-"Medium-sized brown female dog with a pink collar.",
-contactName:"Diego",
-phone:"+591 70567890"
-}
+    {
+        id:6,
+        name:"Bella",
+        breed:"Cocker Spaniel",
+        status:"found",
+        area:"Sirari",
+        date:"2026-08-11",
+        location:"Neighborhood park",
+        description:
+        "Medium-sized brown female dog with a pink collar.",
+        contactName:"Diego",
+        phone:"+591 70567890"
+    }
 
 ];
 
@@ -2986,17 +2961,17 @@ document.getElementById("formStatus");
 
 function imageFallback(image){
 
-image.onerror = null;
+    image.onerror = null;
 
-image.style.objectFit = "contain";
+    image.style.objectFit = "contain";
 
-image.style.padding = "40px";
+    image.style.padding = "40px";
 
-image.style.background =
-"linear-gradient(145deg,#D9C3A6,#F0E4D3)";
+    image.style.background =
+    "linear-gradient(145deg,#D9C3A6,#F0E4D3)";
 
-image.src =
-"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23D9C3A6'/%3E%3Ctext x='200' y='150' text-anchor='middle' font-size='70'%3E🐶%3C/text%3E%3C/svg%3E";
+    image.src =
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23D9C3A6'/%3E%3Ctext x='200' y='150' text-anchor='middle' font-size='70'%3E🐶%3C/text%3E%3C/svg%3E";
 
 }
 
@@ -3007,38 +2982,38 @@ image.src =
 
 function showPage(page){
 
-document
-.querySelectorAll(".page")
-.forEach(section=>{
+    document
+    .querySelectorAll(".page")
+    .forEach(section => {
 
-section.classList.remove("active");
+        section.classList.remove("active");
 
-});
-
-
-const target =
-document.getElementById(page + "Page");
+    });
 
 
-if(target){
-
-target.classList.add("active");
-
-}
+    const target =
+    document.getElementById(page + "Page");
 
 
-window.scrollTo({
+    if(target){
 
-top:0,
+        target.classList.add("active");
 
-behavior:"smooth"
-
-});
+    }
 
 
-document
-.getElementById("navLinks")
-.classList.remove("open");
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+
+    document
+    .getElementById("navLinks")
+    .classList.remove("open");
 
 }
 
@@ -3049,20 +3024,20 @@ document
 
 function goHow(){
 
-showPage("home");
+    showPage("home");
 
 
-setTimeout(()=>{
+    setTimeout(() => {
 
-document
-.getElementById("howSection")
-.scrollIntoView({
+        document
+        .getElementById("howSection")
+        .scrollIntoView({
 
-behavior:"smooth"
+            behavior:"smooth"
 
-});
+        });
 
-},150);
+    },150);
 
 }
 
@@ -3073,122 +3048,118 @@ behavior:"smooth"
 
 function formatDate(date){
 
-const options = {
+    const options = {
 
-year:"numeric",
+        year:"numeric",
 
-month:"short",
+        month:"short",
 
-day:"numeric"
+        day:"numeric"
 
-};
+    };
 
-return new Date(date)
-.toLocaleDateString(
-"en-US",
-options
-);
+
+    return new Date(date)
+    .toLocaleDateString(
+        "en-US",
+        options
+    );
 
 }
 
 
 /* =========================================================
    DOG CARD
+   NO IMAGE
 ========================================================= */
 
 function dogCard(dog){
 
-return `
+    return `
 
-<article class="dog-card">
+    <article class="dog-card">
 
-<div class="dog-photo">
-
-<img
-
-src="dgs.webp"
-
-alt="${dog.name}"
-
-class="dog-card-image"
-
-onerror="imageFallback(this)"
-
->
-
-</div>
+        <div class="dog-card-body">
 
 
-<div class="dog-card-body">
+            <div class="card-top">
 
 
-<div class="card-top">
-
-<h3>
-${dog.name}
-</h3>
+                <h3>
+                    ${dog.name}
+                </h3>
 
 
-<span class="badge ${dog.status}">
+                <span class="badge ${dog.status}">
 
-${
-dog.status === "lost"
-?
-"LOST"
-:
-"FOUND"
-}
+                    ${
+                        dog.status === "lost"
+                        ? "LOST"
+                        : "FOUND"
+                    }
 
-</span>
-
-</div>
+                </span>
 
 
-<div class="meta">
-
-📍 ${dog.area}
-
-</div>
+            </div>
 
 
-<p>
+            <div class="meta">
 
-${dog.description}
+                📍 ${dog.area}
 
-</p>
-
-
-<div class="card-footer">
+            </div>
 
 
-<span class="date">
+            <p>
 
-${formatDate(dog.date)}
+                ${dog.description}
 
-</span>
-
-
-<button
-
-class="text-link"
-
-onclick="openDetails(${dog.id})"
-
->
-
-View Details →
-
-</button>
+            </p>
 
 
-</div>
+            <div class="breed-info">
+
+                <span class="breed-label">
+                    BREED
+                </span>
 
 
-</div>
+                <span class="breed-name">
+                    ${dog.breed}
+                </span>
 
-</article>
+            </div>
 
-`;
+
+            <div class="card-footer">
+
+
+                <span class="date">
+
+                    ${formatDate(dog.date)}
+
+                </span>
+
+
+                <button
+                    class="text-link"
+                    onclick="openDetails(${dog.id})"
+                >
+
+                    View Details →
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </article>
+
+    `;
 
 }
 
@@ -3199,25 +3170,28 @@ View Details →
 
 function emptyState(){
 
-return `
+    return `
 
-<div class="empty-state">
+    <div class="empty-state">
 
-<div class="empty-state-icon">
-🐕
-</div>
+        <div class="empty-state-icon">
+            🐕
+        </div>
 
-<h3>
-No dogs found
-</h3>
 
-<p>
-Try changing your search or filters.
-</p>
+        <h3>
+            No dogs found
+        </h3>
 
-</div>
 
-`;
+        <p>
+            Try changing your search or filters.
+        </p>
+
+
+    </div>
+
+    `;
 
 }
 
@@ -3228,21 +3202,21 @@ Try changing your search or filters.
 
 function renderRecent(){
 
-const recent =
-dogs
-.slice()
-.sort(
-(a,b)=>
-new Date(b.date) -
-new Date(a.date)
-)
-.slice(0,3);
+    const recent =
+    dogs
+    .slice()
+    .sort(
+        (a,b) =>
+        new Date(b.date) -
+        new Date(a.date)
+    )
+    .slice(0,3);
 
 
-recentDogs.innerHTML =
-recent
-.map(dogCard)
-.join("");
+    recentDogs.innerHTML =
+    recent
+    .map(dogCard)
+    .join("");
 
 }
 
@@ -3253,72 +3227,76 @@ recent
 
 function filteredDogs(){
 
-return dogs.filter(dog=>{
+    return dogs.filter(dog => {
 
 
-const statusOK =
+        const statusOK =
 
-selectedStatus === "all"
+        selectedStatus === "all"
 
-||
+        ||
 
-dog.status === selectedStatus;
-
-
-const areaOK =
-
-selectedArea === "all"
-
-||
-
-dog.area === selectedArea;
+        dog.status === selectedStatus;
 
 
-const searchableText =
+        const areaOK =
 
-(
+        selectedArea === "all"
 
-dog.name +
+        ||
 
-" " +
-
-dog.description +
-
-" " +
-
-dog.area +
-
-" " +
-
-dog.location
-
-)
-
-.toLowerCase();
+        dog.area === selectedArea;
 
 
-const searchOK =
+        const searchableText =
 
-searchableText
-.includes(
-searchText.toLowerCase()
-);
+        (
+
+            dog.name +
+
+            " " +
+
+            dog.breed +
+
+            " " +
+
+            dog.description +
+
+            " " +
+
+            dog.area +
+
+            " " +
+
+            dog.location
+
+        )
+
+        .toLowerCase();
 
 
-return
+        const searchOK =
 
-statusOK
-
-&&
-
-areaOK
-
-&&
-
-searchOK;
+        searchableText
+        .includes(
+            searchText.toLowerCase()
+        );
 
 
-});
+        return
+
+        statusOK
+
+        &&
+
+        areaOK
+
+        &&
+
+        searchOK;
+
+
+    });
 
 }
 
@@ -3329,182 +3307,175 @@ searchOK;
 
 function renderDogs(){
 
-const filtered =
-filteredDogs();
+    const filtered =
+    filteredDogs();
 
 
-if(filtered.length === 0){
+    if(filtered.length === 0){
 
-dogGrid.innerHTML =
-emptyState();
+        dogGrid.innerHTML =
+        emptyState();
 
-}
+    }
 
-else{
+    else{
 
-dogGrid.innerHTML =
-filtered
-.map(dogCard)
-.join("");
+        dogGrid.innerHTML =
+        filtered
+        .map(dogCard)
+        .join("");
 
-}
+    }
 
 
-resultsCount.textContent =
+    resultsCount.textContent =
 
-`${filtered.length}
-${filtered.length === 1 ? "report" : "reports"}`;
+    `${filtered.length}
+    ${filtered.length === 1 ? "report" : "reports"}`;
 
 }
 
 
 /* =========================================================
-   DETAILS
+   DOG DETAILS
+   NO IMAGE
 ========================================================= */
 
 function openDetails(id){
 
-const dog =
-dogs.find(
-dog => dog.id === id
-);
+    const dog =
+    dogs.find(
+        dog => dog.id === id
+    );
 
 
-if(!dog){
+    if(!dog){
 
-return;
+        return;
 
-}
+    }
 
 
-document
-.getElementById("detailsBox")
-.innerHTML = `
+    document
+    .getElementById("detailsBox")
+    .innerHTML = `
 
-<div class="details-photo">
 
-<img
+    <div class="details-info">
 
-src="dgs.webp"
 
-alt="${dog.name}"
+        <span class="badge ${dog.status}">
 
-onerror="imageFallback(this)"
+            ${
+                dog.status === "lost"
+                ? "LOST"
+                : "FOUND"
+            }
 
->
+        </span>
 
-</div>
 
+        <h1>
 
-<div class="details-info">
+            ${dog.name}
 
+        </h1>
 
-<span class="badge ${dog.status}">
 
-${
-dog.status === "lost"
-?
-"LOST"
-:
-"FOUND"
-}
+        <div class="detail-item">
 
-</span>
+            <strong>
+                Area
+            </strong>
 
+            📍 ${dog.area}
 
-<h1>
+        </div>
 
-${dog.name}
 
-</h1>
+        <div class="detail-item">
 
+            <strong>
+                Breed
+            </strong>
 
-<div class="detail-item">
+            ${dog.breed}
 
-<strong>
-Area
-</strong>
+        </div>
 
-📍 ${dog.area}
 
-</div>
+        <div class="detail-item">
 
+            <strong>
+                Date
+            </strong>
 
-<div class="detail-item">
+            ${formatDate(dog.date)}
 
-<strong>
-Date
-</strong>
+        </div>
 
-${formatDate(dog.date)}
 
-</div>
+        <div class="detail-item">
 
+            <strong>
+                Last Seen / Found
+            </strong>
 
-<div class="detail-item">
+            ${dog.location}
 
-<strong>
-Last Seen / Found
-</strong>
+        </div>
 
-${dog.location}
 
-</div>
+        <div class="detail-item">
 
+            <strong>
+                Description
+            </strong>
 
-<div class="detail-item">
+            ${dog.description}
 
-<strong>
-Description
-</strong>
+        </div>
 
-${dog.description}
 
-</div>
+        <div class="detail-item">
 
+            <strong>
+                Contact
+            </strong>
 
-<div class="detail-item">
+            ${dog.contactName}
 
-<strong>
-Contact
-</strong>
+            <br>
 
-${dog.contactName}
+            ${dog.phone}
 
-<br>
+        </div>
 
-${dog.phone}
 
-</div>
+        <br>
 
 
-<br>
+        <a
+            class="btn btn-primary"
+            href="tel:${dog.phone}"
+            style="
+                text-decoration:none;
+                display:inline-block;
+            "
+        >
 
+            📞 Contact
 
-<a
+        </a>
 
-class="btn btn-primary"
 
-href="tel:${dog.phone}"
+    </div>
 
-style="
-text-decoration:none;
-display:inline-block;
-"
 
->
+    `;
 
-📞 Contact
 
-</a>
-
-
-</div>
-
-`;
-
-
-showPage("details");
+    showPage("details");
 
 }
 
@@ -3515,41 +3486,41 @@ showPage("details");
 
 function clearFilters(){
 
-selectedStatus =
-"all";
+    selectedStatus =
+    "all";
 
-selectedArea =
-"all";
+    selectedArea =
+    "all";
 
-searchText =
-"";
-
-
-searchInput.value =
-"";
+    searchText =
+    "";
 
 
-areaFilter.value =
-"all";
+    searchInput.value =
+    "";
 
 
-document
-.querySelectorAll(".filter-btn")
-.forEach(btn=>{
-
-btn.classList.remove("active");
-
-});
+    areaFilter.value =
+    "all";
 
 
-document
-.querySelector(
-'[data-status="all"]'
-)
-.classList.add("active");
+    document
+    .querySelectorAll(".filter-btn")
+    .forEach(btn => {
+
+        btn.classList.remove("active");
+
+    });
 
 
-renderDogs();
+    document
+    .querySelector(
+        '[data-status="all"]'
+    )
+    .classList.add("active");
+
+
+    renderDogs();
 
 }
 
@@ -3560,25 +3531,25 @@ renderDogs();
 
 function openReportWithStatus(status){
 
-showPage("report");
+    showPage("report");
 
 
-setTimeout(()=>{
+    setTimeout(() => {
 
-const radio =
-document.querySelector(
-`input[value="${status}"]`
-);
+        const radio =
+        document.querySelector(
+            `input[value="${status}"]`
+        );
 
 
-if(radio){
+        if(radio){
 
-radio.checked =
-true;
+            radio.checked =
+            true;
 
-}
+        }
 
-},100);
+    },100);
 
 }
 
@@ -3588,15 +3559,15 @@ true;
 ========================================================= */
 
 searchInput.addEventListener(
-"input",
-function(event){
+    "input",
+    function(event){
 
-searchText =
-event.target.value.trim();
+        searchText =
+        event.target.value.trim();
 
-renderDogs();
+        renderDogs();
 
-}
+    }
 );
 
 
@@ -3605,15 +3576,15 @@ renderDogs();
 ========================================================= */
 
 areaFilter.addEventListener(
-"change",
-function(event){
+    "change",
+    function(event){
 
-selectedArea =
-event.target.value;
+        selectedArea =
+        event.target.value;
 
-renderDogs();
+        renderDogs();
 
-}
+    }
 );
 
 
@@ -3623,34 +3594,34 @@ renderDogs();
 
 document
 .querySelectorAll(".filter-btn")
-.forEach(btn=>{
+.forEach(btn => {
 
 
-btn.addEventListener(
-"click",
-function(){
+    btn.addEventListener(
+        "click",
+        function(){
 
-selectedStatus =
-this.dataset.status;
-
-
-document
-.querySelectorAll(".filter-btn")
-.forEach(button=>{
-
-button.classList.remove("active");
-
-});
+            selectedStatus =
+            this.dataset.status;
 
 
-this.classList.add("active");
+            document
+            .querySelectorAll(".filter-btn")
+            .forEach(button => {
+
+                button.classList.remove("active");
+
+            });
 
 
-renderDogs();
+            this.classList.add("active");
 
-}
 
-);
+            renderDogs();
+
+        }
+
+    );
 
 });
 
@@ -3662,145 +3633,184 @@ renderDogs();
 document
 .getElementById("reportForm")
 .addEventListener(
-"submit",
-function(event){
+    "submit",
+    function(event){
 
-event.preventDefault();
-
-
-const formData =
-new FormData(this);
+        event.preventDefault();
 
 
-const name =
-formData.get("name").trim();
+        const formData =
+        new FormData(this);
 
 
-const status =
-formData.get("status");
+        const name =
+        formData
+        .get("name")
+        .trim();
 
 
-const area =
-formData.get("area");
+        const breed =
+        formData
+        .get("breed")
+        .trim();
 
 
-const date =
-formData.get("date");
+        const status =
+        formData.get("status");
 
 
-const location =
-formData.get("location").trim();
+        const area =
+        formData.get("area");
 
 
-const description =
-formData.get("description").trim();
+        const date =
+        formData.get("date");
 
 
-const contactName =
-formData.get("contactName").trim();
+        const location =
+        formData
+        .get("location")
+        .trim();
 
 
-const phone =
-formData.get("phone").trim();
+        const description =
+        formData
+        .get("description")
+        .trim();
 
 
-if(
-!status ||
-!area ||
-!date ||
-!location ||
-!description ||
-!contactName ||
-!phone
-){
-
-formStatus.textContent =
-"Please complete all required fields.";
-
-formStatus.className =
-"form-error";
-
-return;
-
-}
+        const contactName =
+        formData
+        .get("contactName")
+        .trim();
 
 
-/* Create new dog */
-
-const newDog = {
-
-id:
-Date.now(),
-
-name:
-name || "Unknown Dog",
-
-status:
-status,
-
-area:
-area,
-
-date:
-date,
-
-location:
-location,
-
-description:
-description,
-
-contactName:
-contactName,
-
-phone:
-phone
-
-};
+        const phone =
+        formData
+        .get("phone")
+        .trim();
 
 
-/* Add report */
+        if(
 
-dogs.unshift(
-newDog
-);
+            !status ||
 
+            !area ||
 
-/* Success message */
+            !date ||
 
-formStatus.textContent =
-"Thank you! Your report has been submitted successfully.";
+            !location ||
 
-formStatus.className =
-"form-success";
+            !description ||
 
+            !contactName ||
 
-/* Reset form */
+            !phone
 
-this.reset();
+        ){
 
+            formStatus.textContent =
+            "Please complete all required fields.";
 
-/* Update website */
+            formStatus.className =
+            "form-error";
 
-renderRecent();
+            return;
 
-renderDogs();
-
-
-/* Go to find page */
-
-setTimeout(()=>{
-
-showPage("find");
-
-formStatus.textContent = "";
-
-formStatus.className = "";
-
-},1200);
+        }
 
 
-}
+        /* ============================================
+           CREATE NEW REPORT
+        ============================================ */
+
+        const newDog = {
+
+            id:
+            Date.now(),
+
+            name:
+            name || "Unknown Dog",
+
+            breed:
+            breed || "Mixed Breed",
+
+            status:
+            status,
+
+            area:
+            area,
+
+            date:
+            date,
+
+            location:
+            location,
+
+            description:
+            description,
+
+            contactName:
+            contactName,
+
+            phone:
+            phone
+
+        };
+
+
+        /* ============================================
+           ADD REPORT
+        ============================================ */
+
+        dogs.unshift(
+            newDog
+        );
+
+
+        /* ============================================
+           SUCCESS
+        ============================================ */
+
+        formStatus.textContent =
+        "Thank you! Your report has been submitted successfully.";
+
+        formStatus.className =
+        "form-success";
+
+
+        /* ============================================
+           RESET FORM
+        ============================================ */
+
+        this.reset();
+
+
+        /* ============================================
+           UPDATE WEBSITE
+        ============================================ */
+
+        renderRecent();
+
+        renderDogs();
+
+
+        /* ============================================
+           GO TO FIND PAGE
+        ============================================ */
+
+        setTimeout(() => {
+
+            showPage("find");
+
+            formStatus.textContent = "";
+
+            formStatus.className = "";
+
+        },1200);
+
+
+    }
 );
 
 
@@ -3811,43 +3821,47 @@ formStatus.className = "";
 document
 .getElementById("menuBtn")
 .addEventListener(
-"click",
-function(){
+    "click",
+    function(){
 
-document
-.getElementById("navLinks")
-.classList.toggle("open");
+        document
+        .getElementById("navLinks")
+        .classList.toggle("open");
 
-}
+    }
 );
 
 
 /* =========================================================
-   CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+   CLOSE MOBILE MENU
 ========================================================= */
 
 document.addEventListener(
-"click",
-function(event){
+    "click",
+    function(event){
 
-const menu =
-document.getElementById("navLinks");
+        const menu =
+        document.getElementById("navLinks");
 
-const button =
-document.getElementById("menuBtn");
+        const button =
+        document.getElementById("menuBtn");
 
 
-if(
-!menu.contains(event.target)
-&&
-!button.contains(event.target)
-){
+        if(
 
-menu.classList.remove("open");
+            !menu.contains(event.target)
 
-}
+            &&
 
-}
+            !button.contains(event.target)
+
+        ){
+
+            menu.classList.remove("open");
+
+        }
+
+    }
 );
 
 
