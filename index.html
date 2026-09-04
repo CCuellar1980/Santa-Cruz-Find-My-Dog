@@ -10,14 +10,10 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Santa Cruz Find My Dog</title>
+    <title>Santa Cruz Pet Finder</title>
 
 
     <style>
-
-        /* ==========================================
-           GENERAL
-        ========================================== */
 
         * {
             box-sizing: border-box;
@@ -46,10 +42,7 @@
 
         body {
 
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
 
             background: var(--bg);
 
@@ -78,17 +71,16 @@
 
         .container {
 
-            width:
-                min(1150px, calc(100% - 32px));
+            width: min(1150px, calc(100% - 32px));
 
             margin: auto;
 
         }
 
 
-        /* ==========================================
+        /* =========================
            HEADER
-        ========================================== */
+        ========================= */
 
         header {
 
@@ -98,13 +90,11 @@
 
             z-index: 1000;
 
-            background:
-                rgba(231, 217, 197, 0.96);
+            background: rgba(231, 217, 197, 0.96);
 
             backdrop-filter: blur(12px);
 
-            border-bottom:
-                1px solid var(--border);
+            border-bottom: 1px solid var(--border);
 
         }
 
@@ -189,9 +179,9 @@
         }
 
 
-        /* ==========================================
+        /* =========================
            PAGES
-        ========================================== */
+        ========================= */
 
         .page {
             display: none;
@@ -203,9 +193,9 @@
         }
 
 
-        /* ==========================================
+        /* =========================
            HERO
-        ========================================== */
+        ========================= */
 
         .hero {
 
@@ -257,9 +247,7 @@
 
 
         .hero h1 span {
-
             color: var(--accent);
-
         }
 
 
@@ -287,9 +275,9 @@
         }
 
 
-        /* ==========================================
+        /* =========================
            BUTTONS
-        ========================================== */
+        ========================= */
 
         .btn {
 
@@ -307,9 +295,7 @@
 
 
         .btn:hover {
-
             transform: translateY(-2px);
-
         }
 
 
@@ -328,15 +314,14 @@
 
             color: var(--dark);
 
-            border:
-                1px solid var(--border);
+            border: 1px solid var(--border);
 
         }
 
 
-        /* ==========================================
+        /* =========================
            HERO IMAGE
-        ========================================== */
+        ========================= */
 
         .hero-image {
 
@@ -346,8 +331,7 @@
 
             border-radius: 30px;
 
-            box-shadow:
-                0 15px 40px rgba(0,0,0,0.12);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 
         }
 
@@ -365,14 +349,12 @@
         }
 
 
-        /* ==========================================
-           PAGE TITLE
-        ========================================== */
+        /* =========================
+           PAGE CONTENT
+        ========================= */
 
         .page-content {
-
             padding: 65px 0 100px;
-
         }
 
 
@@ -396,9 +378,9 @@
         }
 
 
-        /* ==========================================
+        /* =========================
            FILTERS
-        ========================================== */
+        ========================= */
 
         .filters {
 
@@ -416,8 +398,7 @@
 
             margin: 35px 0 25px;
 
-            border:
-                1px solid var(--border);
+            border: 1px solid var(--border);
 
         }
 
@@ -447,8 +428,7 @@
 
             border-radius: 12px;
 
-            border:
-                1px solid var(--border);
+            border: 1px solid var(--border);
 
             background: var(--light);
 
@@ -462,22 +442,19 @@
         input:focus,
         textarea:focus,
         select:focus {
-
             border-color: var(--accent);
-
         }
 
 
-        /* ==========================================
+        /* =========================
            DOG GRID
-        ========================================== */
+        ========================= */
 
         .dog-grid {
 
             display: grid;
 
-            grid-template-columns:
-                repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
 
             gap: 22px;
 
@@ -492,8 +469,7 @@
 
             overflow: hidden;
 
-            border:
-                1px solid var(--border);
+            border: 1px solid var(--border);
 
             transition: 0.2s;
 
@@ -501,9 +477,7 @@
 
 
         .dog-card:hover {
-
             transform: translateY(-5px);
-
         }
 
 
@@ -523,9 +497,7 @@
 
 
         .dog-card-body {
-
             padding: 22px;
-
         }
 
 
@@ -566,8 +538,7 @@
 
         .lost {
 
-            background:
-                rgba(198,95,75,0.15);
+            background: rgba(198,95,75,0.15);
 
             color: var(--lost);
 
@@ -576,8 +547,7 @@
 
         .found {
 
-            background:
-                rgba(95,138,98,0.15);
+            background: rgba(95,138,98,0.15);
 
             color: var(--found);
 
@@ -596,9 +566,7 @@
 
 
         .dog-info strong {
-
             color: var(--dark);
-
         }
 
 
@@ -628,9 +596,9 @@
         }
 
 
-        /* ==========================================
+        /* =========================
            REPORT FORM
-        ========================================== */
+        ========================= */
 
         .report-container {
 
@@ -651,8 +619,7 @@
 
             border-radius: 28px;
 
-            border:
-                1px solid var(--border);
+            border: 1px solid var(--border);
 
         }
 
@@ -694,16 +661,12 @@
 
 
         .status-options label {
-
             flex: 1;
-
         }
 
 
         .status-options input {
-
             display: none;
-
         }
 
 
@@ -719,19 +682,16 @@
 
             background: var(--light);
 
-            border:
-                1px solid var(--border);
+            border: 1px solid var(--border);
 
             font-weight: 800;
 
         }
 
 
-        .status-options input:checked
-        + .status-option {
+        .status-options input:checked + .status-option {
 
-            outline:
-                2px solid var(--accent);
+            outline: 2px solid var(--accent);
 
         }
 
@@ -765,22 +725,18 @@
 
 
         .success {
-
             color: var(--found);
-
         }
 
 
         .error {
-
             color: var(--lost);
-
         }
 
 
-        /* ==========================================
+        /* =========================
            EMPTY
-        ========================================== */
+        ========================= */
 
         .empty {
 
@@ -797,9 +753,9 @@
         }
 
 
-        /* ==========================================
+        /* =========================
            DETAILS
-        ========================================== */
+        ========================= */
 
         .details-card {
 
@@ -828,9 +784,7 @@
 
 
         .details-content {
-
             padding: 40px;
-
         }
 
 
@@ -849,8 +803,7 @@
 
             padding: 16px 0;
 
-            border-bottom:
-                1px solid var(--border);
+            border-bottom: 1px solid var(--border);
 
         }
 
@@ -870,9 +823,9 @@
         }
 
 
-        /* ==========================================
+        /* =========================
            MOBILE
-        ========================================== */
+        ========================= */
 
         @media (max-width: 850px) {
 
@@ -910,8 +863,11 @@
             }
 
             .nav-links button {
+
                 padding: 8px;
+
                 font-size: 12px;
+
             }
 
         }
@@ -923,10 +879,6 @@
 
 <body>
 
-
-<!-- ==========================================
-     HEADER
-========================================== -->
 
 <header>
 
@@ -964,22 +916,17 @@
 </header>
 
 
-
 <main>
 
 
-<!-- ==========================================
-     HOME PAGE
-========================================== -->
+<!-- HOME -->
 
 <section
     id="homePage"
     class="page active"
 >
 
-
     <div class="container hero">
-
 
         <div>
 
@@ -1018,9 +965,7 @@
                     class="btn btn-primary"
                     onclick="showPage('find')"
                 >
-
                     🔎 Find a Dog
-
                 </button>
 
 
@@ -1028,9 +973,7 @@
                     class="btn btn-secondary"
                     onclick="showPage('report')"
                 >
-
                     📝 Report a Dog
-
                 </button>
 
             </div>
@@ -1047,26 +990,19 @@
 
         </div>
 
-
     </div>
-
 
 </section>
 
 
-
-<!-- ==========================================
-     FIND PAGE
-========================================== -->
+<!-- FIND PAGE -->
 
 <section
     id="findPage"
     class="page"
 >
 
-
     <div class="container page-content">
-
 
         <span class="eyebrow">
             LOST & FOUND DIRECTORY
@@ -1086,9 +1022,6 @@
         </p>
 
 
-
-        <!-- FILTERS -->
-
         <div class="filters">
 
 
@@ -1105,7 +1038,6 @@
                 >
 
             </div>
-
 
 
             <div class="filter-group">
@@ -1133,7 +1065,6 @@
             </div>
 
 
-
             <div class="filter-group">
 
                 <label>
@@ -1146,38 +1077,17 @@
                         All Areas
                     </option>
 
-                    <option>
-                        Equipetrol
-                    </option>
-
-                    <option>
-                        Urubó
-                    </option>
-
-                    <option>
-                        Sirari
-                    </option>
-
-                    <option>
-                        Las Palmas
-                    </option>
-
-                    <option>
-                        Urbarí
-                    </option>
-
-                    <option>
-                        Centro
-                    </option>
-
-                    <option>
-                        Other
-                    </option>
+                    <option>Equipetrol</option>
+                    <option>Urubó</option>
+                    <option>Sirari</option>
+                    <option>Las Palmas</option>
+                    <option>Urbarí</option>
+                    <option>Centro</option>
+                    <option>Other</option>
 
                 </select>
 
             </div>
-
 
         </div>
 
@@ -1188,34 +1098,25 @@
         >
         </div>
 
-
     </div>
-
 
 </section>
 
 
-
-<!-- ==========================================
-     DETAILS PAGE
-========================================== -->
+<!-- DETAILS PAGE -->
 
 <section
     id="detailsPage"
     class="page"
 >
 
-
     <div class="container page-content">
-
 
         <button
             class="btn btn-secondary"
             onclick="showPage('find')"
         >
-
             ← Back
-
         </button>
 
 
@@ -1223,31 +1124,21 @@
         <br>
 
 
-        <div
-            id="detailsContainer"
-        >
-        </div>
-
+        <div id="detailsContainer"></div>
 
     </div>
-
 
 </section>
 
 
-
-<!-- ==========================================
-     REPORT PAGE
-========================================== -->
+<!-- REPORT PAGE -->
 
 <section
     id="reportPage"
     class="page"
 >
 
-
     <div class="container page-content">
-
 
         <div class="report-container">
 
@@ -1270,17 +1161,13 @@
             </p>
 
 
-
             <form
                 id="reportForm"
                 class="report-form"
             >
 
-
                 <div class="form-grid">
 
-
-                    <!-- NAME -->
 
                     <div class="form-group">
 
@@ -1297,9 +1184,6 @@
                     </div>
 
 
-
-                    <!-- BREED -->
-
                     <div class="form-group">
 
                         <label>
@@ -1314,9 +1198,6 @@
 
                     </div>
 
-
-
-                    <!-- STATUS -->
 
                     <div class="form-group">
 
@@ -1344,7 +1225,6 @@
                             </label>
 
 
-
                             <label>
 
                                 <input
@@ -1365,9 +1245,6 @@
                     </div>
 
 
-
-                    <!-- AREA -->
-
                     <div class="form-group">
 
                         <label>
@@ -1384,41 +1261,18 @@
                                 Select an area
                             </option>
 
-                            <option>
-                                Equipetrol
-                            </option>
-
-                            <option>
-                                Urubó
-                            </option>
-
-                            <option>
-                                Sirari
-                            </option>
-
-                            <option>
-                                Las Palmas
-                            </option>
-
-                            <option>
-                                Urbarí
-                            </option>
-
-                            <option>
-                                Centro
-                            </option>
-
-                            <option>
-                                Other
-                            </option>
+                            <option>Equipetrol</option>
+                            <option>Urubó</option>
+                            <option>Sirari</option>
+                            <option>Las Palmas</option>
+                            <option>Urbarí</option>
+                            <option>Centro</option>
+                            <option>Other</option>
 
                         </select>
 
                     </div>
 
-
-
-                    <!-- DATE -->
 
                     <div class="form-group">
 
@@ -1434,9 +1288,6 @@
 
                     </div>
 
-
-
-                    <!-- LOCATION -->
 
                     <div class="form-group">
 
@@ -1454,9 +1305,6 @@
                     </div>
 
 
-
-                    <!-- DESCRIPTION -->
-
                     <div class="form-group full">
 
                         <label>
@@ -1473,9 +1321,6 @@
                     </div>
 
 
-
-                    <!-- CONTACT NAME -->
-
                     <div class="form-group">
 
                         <label>
@@ -1491,9 +1336,6 @@
                     </div>
 
 
-
-                    <!-- PHONE -->
-
                     <div class="form-group">
 
                         <label>
@@ -1508,7 +1350,6 @@
                         >
 
                     </div>
-
 
 
                     <!-- IMAGE -->
@@ -1527,6 +1368,17 @@
                         >
 
 
+                        <p
+                            style="
+                                margin-top:8px;
+                                font-size:13px;
+                                color:#75665b;
+                            "
+                        >
+                            The image will be compressed before saving.
+                        </p>
+
+
                         <img
                             id="imagePreview"
                             class="image-preview"
@@ -1538,7 +1390,6 @@
                 </div>
 
 
-
                 <button
                     type="submit"
                     class="btn btn-primary"
@@ -1548,27 +1399,21 @@
                         margin-top:25px;
                     "
                 >
-
                     Submit Report
-
                 </button>
 
 
                 <p
                     id="formStatus"
                     class="form-status"
-                >
-                </p>
+                ></p>
 
 
             </form>
 
-
         </div>
 
-
     </div>
-
 
 </section>
 
@@ -1576,20 +1421,16 @@
 </main>
 
 
-
-<!-- ==========================================
-     FIREBASE + JAVASCRIPT
-========================================== -->
+<!-- ========================================
+     JAVASCRIPT + FIREBASE FIRESTORE ONLY
+======================================== -->
 
 <script type="module">
 
 
-/* ==========================================
+/* ========================================
    FIREBASE IMPORTS
-========================================== */
-
-
-/* FIREBASE APP */
+======================================== */
 
 import {
     initializeApp
@@ -1600,8 +1441,6 @@ from
 "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 
-/* FIRESTORE */
-
 import {
 
     getFirestore,
@@ -1611,10 +1450,6 @@ import {
     addDoc,
 
     getDocs,
-
-    doc,
-
-    getDoc,
 
     serverTimestamp,
 
@@ -1629,28 +1464,9 @@ from
 "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 
-/* FIREBASE STORAGE */
-
-import {
-
-    getStorage,
-
-    ref,
-
-    uploadBytes,
-
-    getDownloadURL
-
-}
-
-from
-
-"https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
-
-
-/* ==========================================
-   YOUR FIREBASE CONFIG
-========================================== */
+/* ========================================
+   YOUR FIREBASE CONFIGURATION
+======================================== */
 
 const firebaseConfig = {
 
@@ -1675,62 +1491,43 @@ const firebaseConfig = {
 };
 
 
-/* ==========================================
+/* ========================================
    INITIALIZE FIREBASE
-========================================== */
+======================================== */
 
 const app =
-    initializeApp(
-        firebaseConfig
-    );
+    initializeApp(firebaseConfig);
 
 
 const db =
-    getFirestore(
-        app
-    );
+    getFirestore(app);
 
 
-const storage =
-    getStorage(
-        app
-    );
-
-
-/* ==========================================
-   VARIABLES
-========================================== */
+/* ========================================
+   GLOBAL VARIABLES
+======================================== */
 
 let dogs = [];
 
 
-/* ==========================================
+/* ========================================
    PAGE NAVIGATION
-========================================== */
+======================================== */
 
 function showPage(pageName) {
 
-
     document
         .querySelectorAll(".page")
-        .forEach(
-            page => {
+        .forEach(page => {
 
-                page.classList.remove(
-                    "active"
-                );
+            page.classList.remove("active");
 
-            }
-        );
+        });
 
 
     document
-        .getElementById(
-            pageName + "Page"
-        )
-        .classList.add(
-            "active"
-        );
+        .getElementById(pageName + "Page")
+        .classList.add("active");
 
 
     window.scrollTo({
@@ -1741,28 +1538,22 @@ function showPage(pageName) {
 
     });
 
-
 }
 
 
-window.showPage =
-    showPage;
+window.showPage = showPage;
 
 
-/* ==========================================
+/* ========================================
    IMAGE PREVIEW
-========================================== */
+======================================== */
 
 const imageInput =
-    document.getElementById(
-        "imageInput"
-    );
+    document.getElementById("imageInput");
 
 
 const imagePreview =
-    document.getElementById(
-        "imagePreview"
-    );
+    document.getElementById("imagePreview");
 
 
 imageInput.addEventListener(
@@ -1770,7 +1561,6 @@ imageInput.addEventListener(
     "change",
 
     function() {
-
 
         const file =
             this.files[0];
@@ -1803,36 +1593,233 @@ imageInput.addEventListener(
             };
 
 
-        reader.readAsDataURL(
-            file
-        );
+        reader.readAsDataURL(file);
 
     }
 
 );
 
 
-/* ==========================================
-   LOAD DOGS FROM FIRESTORE
-========================================== */
+/* ========================================
+   COMPRESS IMAGE
+
+   This reduces the image size before
+   saving it directly in Firestore.
+======================================== */
+
+function compressImage(file) {
+
+    return new Promise(
+
+        (resolve, reject) => {
+
+            const reader =
+                new FileReader();
+
+
+            reader.onload =
+                function(event) {
+
+                    const image =
+                        new Image();
+
+
+                    image.onload =
+                        function() {
+
+                            const canvas =
+                                document.createElement(
+                                    "canvas"
+                                );
+
+
+                            let width =
+                                image.width;
+
+
+                            let height =
+                                image.height;
+
+
+                            /*
+                            Maximum image dimension
+                            */
+
+                            const maxSize =
+                                700;
+
+
+                            if (
+
+                                width > height
+
+                                &&
+
+                                width > maxSize
+
+                            ) {
+
+                                height =
+                                    Math.round(
+
+                                        height
+
+                                        *
+
+                                        (
+                                            maxSize
+                                            /
+                                            width
+                                        )
+
+                                    );
+
+
+                                width =
+                                    maxSize;
+
+                            }
+
+
+                            else if (
+
+                                height >= width
+
+                                &&
+
+                                height > maxSize
+
+                            ) {
+
+                                width =
+                                    Math.round(
+
+                                        width
+
+                                        *
+
+                                        (
+                                            maxSize
+                                            /
+                                            height
+                                        )
+
+                                    );
+
+
+                                height =
+                                    maxSize;
+
+                            }
+
+
+                            canvas.width =
+                                width;
+
+
+                            canvas.height =
+                                height;
+
+
+                            const context =
+                                canvas.getContext("2d");
+
+
+                            context.drawImage(
+
+                                image,
+
+                                0,
+
+                                0,
+
+                                width,
+
+                                height
+
+                            );
+
+
+                            /*
+                            JPEG compression quality
+                            */
+
+                            const compressedImage =
+
+                                canvas.toDataURL(
+
+                                    "image/jpeg",
+
+                                    0.65
+
+                                );
+
+
+                            resolve(
+                                compressedImage
+                            );
+
+                        };
+
+
+                    image.onerror =
+                        reject;
+
+
+                    image.src =
+                        event.target.result;
+
+                };
+
+
+            reader.onerror =
+                reject;
+
+
+            reader.readAsDataURL(file);
+
+        }
+
+    );
+
+}
+
+
+/* ========================================
+   LOAD DOG REPORTS FROM FIRESTORE
+======================================== */
 
 async function loadDogs() {
+
+    const dogGrid =
+        document.getElementById("dogGrid");
+
+
+    dogGrid.innerHTML = `
+
+        <div class="empty">
+
+            <h2>
+                Loading reports...
+            </h2>
+
+        </div>
+
+    `;
 
 
     try {
 
 
         const dogsCollection =
-            collection(
-                db,
-                "dogs"
-            );
+            collection(db, "dogs");
 
 
         let snapshot;
 
 
         try {
+
 
             const dogsQuery =
 
@@ -1849,18 +1836,20 @@ async function loadDogs() {
 
 
             snapshot =
-                await getDocs(
-                    dogsQuery
-                );
+                await getDocs(dogsQuery);
+
 
         }
 
 
-        catch (error) {
+        catch (orderError) {
 
 
-            /* If ordering fails because old
-               documents don't have createdAt */
+            console.warn(
+                "Loading without ordering:",
+                orderError
+            );
+
 
             snapshot =
                 await getDocs(
@@ -1900,39 +1889,32 @@ async function loadDogs() {
         );
 
 
-        document
-            .getElementById(
-                "dogGrid"
-            )
-            .innerHTML = `
+        dogGrid.innerHTML = `
 
-                <div class="empty">
+            <div class="empty">
 
-                    <h2>
-                        Unable to load reports.
-                    </h2>
+                <h2>
+                    Unable to load reports.
+                </h2>
 
-                    <p>
-                        Check your Firebase
-                        Firestore rules.
-                    </p>
+                <p>
+                    Check your Firestore rules.
+                </p>
 
-                </div>
+            </div>
 
-            `;
+        `;
 
     }
-
 
 }
 
 
-/* ==========================================
+/* ========================================
    FORMAT DATE
-========================================== */
+======================================== */
 
 function formatDate(date) {
-
 
     if (!date) {
 
@@ -1960,114 +1942,101 @@ function formatDate(date) {
 
     );
 
-
 }
 
 
-/* ==========================================
-   RENDER DOGS
-========================================== */
+/* ========================================
+   RENDER DOG CARDS
+======================================== */
 
 function renderDogs() {
 
 
     const dogGrid =
-        document.getElementById(
-            "dogGrid"
-        );
+        document.getElementById("dogGrid");
 
 
     const search =
         document
-            .getElementById(
-                "searchInput"
-            )
-            .value
-            .toLowerCase();
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
 
 
     const status =
         document
-            .getElementById(
-                "statusFilter"
-            )
-            .value;
+        .getElementById("statusFilter")
+        .value;
 
 
     const area =
         document
-            .getElementById(
-                "areaFilter"
-            )
-            .value;
+        .getElementById("areaFilter")
+        .value;
 
 
     const filteredDogs =
-        dogs.filter(
-            dog => {
+        dogs.filter(dog => {
 
 
-                const searchText =
+            const searchText =
 
-                    [
+                [
 
-                        dog.name,
+                    dog.name,
 
-                        dog.breed,
+                    dog.breed,
 
-                        dog.description,
+                    dog.description,
 
-                        dog.area,
+                    dog.area,
 
-                        dog.location
+                    dog.location
 
-                    ]
+                ]
 
-                    .join(" ")
+                .join(" ")
 
-                    .toLowerCase();
-
-
-                const matchesSearch =
-                    searchText.includes(
-                        search
-                    );
+                .toLowerCase();
 
 
-                const matchesStatus =
-
-                    status === "all"
-
-                    ||
-
-                    dog.status ===
-                    status;
+            const matchesSearch =
+                searchText.includes(
+                    search
+                );
 
 
-                const matchesArea =
+            const matchesStatus =
 
-                    area === "all"
+                status === "all"
 
-                    ||
+                ||
 
-                    dog.area ===
-                    area;
+                dog.status === status;
 
 
-                return
+            const matchesArea =
 
-                    matchesSearch
+                area === "all"
 
-                    &&
+                ||
 
-                    matchesStatus
+                dog.area === area;
 
-                    &&
 
-                    matchesArea;
+            return
 
-            }
-        );
+                matchesSearch
+
+                &&
+
+                matchesStatus
+
+                &&
+
+                matchesArea;
+
+        });
 
 
     if (
@@ -2102,133 +2071,122 @@ function renderDogs() {
 
     dogGrid.innerHTML =
         filteredDogs
-
-        .map(
-            dog => `
+        .map(dog => `
 
 
-            <article class="dog-card">
+        <article class="dog-card">
 
 
-                <img
+            <img
 
-                    class="dog-card-image"
+                class="dog-card-image"
 
-                    src="${dog.imageURL}"
+                src="${dog.imageData}"
 
-                    alt="${dog.name || "Dog"}"
+                alt="${dog.name || "Dog"}"
 
-                    onerror="this.style.display='none'"
-
-                >
+            >
 
 
-                <div class="dog-card-body">
+            <div class="dog-card-body">
 
 
-                    <div class="dog-card-top">
+                <div class="dog-card-top">
 
 
-                        <h3>
+                    <h3>
 
-                            ${dog.name || "Unknown Dog"}
+                        ${dog.name || "Unknown Dog"}
 
-                        </h3>
-
-
-                        <span
-
-                            class="badge ${dog.status}"
-
-                        >
-
-                            ${dog.status.toUpperCase()}
-
-                        </span>
+                    </h3>
 
 
-                    </div>
+                    <span
 
+                        class="badge ${dog.status}"
 
-                    <div class="dog-info">
+                    >
 
+                        ${dog.status.toUpperCase()}
 
-                        <strong>
-                            Breed:
-                        </strong>
-
-                        ${dog.breed || "Unknown"}
-
-
-                        <br>
-
-
-                        <strong>
-                            Area:
-                        </strong>
-
-                        📍 ${dog.area}
-
-
-                        <br>
-
-
-                        <strong>
-                            Date:
-                        </strong>
-
-                        ${formatDate(dog.date)}
-
-
-                    </div>
-
-
-                    <div class="dog-actions">
-
-
-                        <span>
-
-                            🐾 Report
-
-                        </span>
-
-
-                        <button
-
-                            class="view-button"
-
-                            onclick="openDetails('${dog.id}')"
-
-                        >
-
-                            View Details →
-
-                        </button>
-
-
-                    </div>
+                    </span>
 
 
                 </div>
 
 
-            </article>
+                <div class="dog-info">
 
 
-            `
+                    <strong>
+                        Breed:
+                    </strong>
 
-        )
+                    ${dog.breed || "Unknown"}
 
+
+                    <br>
+
+
+                    <strong>
+                        Area:
+                    </strong>
+
+                    📍 ${dog.area}
+
+
+                    <br>
+
+
+                    <strong>
+                        Date:
+                    </strong>
+
+                    ${formatDate(dog.date)}
+
+
+                </div>
+
+
+                <div class="dog-actions">
+
+
+                    <span>
+                        🐾 Report
+                    </span>
+
+
+                    <button
+
+                        class="view-button"
+
+                        onclick="openDetails('${dog.id}')"
+
+                    >
+                        View Details →
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+        `)
         .join("");
 
 }
 
 
-/* ==========================================
+/* ========================================
    OPEN DETAILS
-========================================== */
+======================================== */
 
-async function openDetails(id) {
+function openDetails(id) {
 
 
     const dog =
@@ -2245,9 +2203,7 @@ async function openDetails(id) {
 
 
     document
-        .getElementById(
-            "detailsContainer"
-        )
+        .getElementById("detailsContainer")
         .innerHTML = `
 
 
@@ -2258,7 +2214,7 @@ async function openDetails(id) {
 
                 class="details-image"
 
-                src="${dog.imageURL}"
+                src="${dog.imageData}"
 
                 alt="${dog.name || "Dog"}"
 
@@ -2356,27 +2312,6 @@ async function openDetails(id) {
                 </div>
 
 
-                <br>
-
-
-                <a
-
-                    class="btn btn-primary"
-
-                    href="tel:${dog.phone}"
-
-                    style="
-                        display:inline-block;
-                        text-decoration:none;
-                    "
-
-                >
-
-                    📞 Contact
-
-                </a>
-
-
             </div>
 
 
@@ -2386,10 +2321,7 @@ async function openDetails(id) {
         `;
 
 
-    showPage(
-        "details"
-    );
-
+    showPage("details");
 
 }
 
@@ -2398,14 +2330,12 @@ window.openDetails =
     openDetails;
 
 
-/* ==========================================
+/* ========================================
    FILTER EVENTS
-========================================== */
+======================================== */
 
 document
-    .getElementById(
-        "searchInput"
-    )
+    .getElementById("searchInput")
     .addEventListener(
 
         "input",
@@ -2416,9 +2346,7 @@ document
 
 
 document
-    .getElementById(
-        "statusFilter"
-    )
+    .getElementById("statusFilter")
     .addEventListener(
 
         "change",
@@ -2429,9 +2357,7 @@ document
 
 
 document
-    .getElementById(
-        "areaFilter"
-    )
+    .getElementById("areaFilter")
     .addEventListener(
 
         "change",
@@ -2441,14 +2367,12 @@ document
     );
 
 
-/* ==========================================
+/* ========================================
    SUBMIT REPORT
-========================================== */
+======================================== */
 
 document
-    .getElementById(
-        "reportForm"
-    )
+    .getElementById("reportForm")
     .addEventListener(
 
         "submit",
@@ -2472,9 +2396,7 @@ document
 
 
             const formData =
-                new FormData(
-                    this
-                );
+                new FormData(this);
 
 
             const imageFile =
@@ -2497,31 +2419,6 @@ document
             }
 
 
-            /* Maximum 10 MB */
-
-            if (
-
-                imageFile.size >
-                10 * 1024 * 1024
-
-            ) {
-
-
-                formStatus.textContent =
-                    "The image must be smaller than 10 MB.";
-
-
-                formStatus.className =
-                    "form-status error";
-
-
-                return;
-
-            }
-
-
-            /* Check image */
-
             if (
 
                 !imageFile.type.startsWith(
@@ -2532,7 +2429,7 @@ document
 
 
                 formStatus.textContent =
-                    "Please upload a valid image file.";
+                    "Please upload a valid image.";
 
 
                 formStatus.className =
@@ -2552,81 +2449,51 @@ document
 
 
                 submitButton.textContent =
-                    "Uploading Image...";
+                    "Processing Image...";
 
 
                 formStatus.textContent =
-                    "Uploading image to Firebase...";
+                    "Compressing image...";
 
 
                 formStatus.className =
                     "form-status";
 
 
-                /* ==================================
-                   CREATE UNIQUE IMAGE NAME
-                ================================== */
+                /*
+                Convert and compress image
+                */
 
-                const uniqueFileName =
+                const imageData =
 
-                    Date.now()
-
-                    +
-
-                    "-"
-
-                    +
-
-                    crypto.randomUUID()
-
-                    +
-
-                    "-"
-
-                    +
-
-                    imageFile.name;
-
-
-                /* ==================================
-                   STORAGE LOCATION
-                ================================== */
-
-                const storageReference =
-
-                    ref(
-
-                        storage,
-
-                        `pet-images/${uniqueFileName}`
-
+                    await compressImage(
+                        imageFile
                     );
 
 
-                /* ==================================
-                   UPLOAD IMAGE
-                ================================== */
+                /*
+                Extra safety check
 
-                await uploadBytes(
+                Firestore documents have a
+                maximum size of approximately
+                1 MB.
+                */
 
-                    storageReference,
+                if (
 
-                    imageFile
+                    imageData.length >
+                    700000
 
-                );
+                ) {
 
 
-                /* ==================================
-                   GET IMAGE URL
-                ================================== */
+                    throw new Error(
 
-                const imageURL =
-
-                    await getDownloadURL(
-
-                        storageReference
+                        "The image is still too large after compression. Please use a smaller image."
 
                     );
+
+                }
 
 
                 submitButton.textContent =
@@ -2634,12 +2501,12 @@ document
 
 
                 formStatus.textContent =
-                    "Saving report to Firebase...";
+                    "Saving report permanently...";
 
 
-                /* ==================================
-                   CREATE DOG REPORT
-                ================================== */
+                /*
+                CREATE REPORT
+                */
 
                 const newDog = {
 
@@ -2647,8 +2514,8 @@ document
                     name:
 
                         formData
-                            .get("name")
-                            .trim()
+                        .get("name")
+                        .trim()
 
                         ||
 
@@ -2658,8 +2525,8 @@ document
                     breed:
 
                         formData
-                            .get("breed")
-                            .trim()
+                        .get("breed")
+                        .trim()
 
                         ||
 
@@ -2690,39 +2557,39 @@ document
                     location:
 
                         formData
-                            .get("location")
-                            .trim(),
+                        .get("location")
+                        .trim(),
 
 
                     description:
 
                         formData
-                            .get("description")
-                            .trim(),
+                        .get("description")
+                        .trim(),
 
 
                     contactName:
 
                         formData
-                            .get("contactName")
-                            .trim(),
+                        .get("contactName")
+                        .trim(),
 
 
                     phone:
 
                         formData
-                            .get("phone")
-                            .trim(),
+                        .get("phone")
+                        .trim(),
 
 
-                    imageURL:
+                    /*
+                    IMAGE SAVED DIRECTLY
+                    IN FIRESTORE
+                    */
 
-                        imageURL,
+                    imageData:
 
-
-                    imagePath:
-
-                        `pet-images/${uniqueFileName}`,
+                        imageData,
 
 
                     createdAt:
@@ -2732,9 +2599,9 @@ document
                 };
 
 
-                /* ==================================
-                   SAVE TO FIRESTORE
-                ================================== */
+                /*
+                SAVE TO FIRESTORE
+                */
 
                 const documentReference =
 
@@ -2750,9 +2617,9 @@ document
                     );
 
 
-                /* ==================================
-                   ADD TO LOCAL LIST
-                ================================== */
+                /*
+                ADD LOCALLY
+                */
 
                 dogs.unshift({
 
@@ -2766,10 +2633,6 @@ document
 
                 renderDogs();
 
-
-                /* ==================================
-                   SUCCESS
-                ================================== */
 
                 formStatus.textContent =
 
@@ -2787,8 +2650,6 @@ document
                 imagePreview.style.display =
                     "none";
 
-
-                /* Go to search page */
 
                 setTimeout(
 
@@ -2828,9 +2689,7 @@ document
 
 
                 formStatus.className =
-
                     "form-status error";
-
 
             }
 
@@ -2843,9 +2702,7 @@ document
 
 
                 submitButton.textContent =
-
                     "Submit Report";
-
 
             }
 
@@ -2855,9 +2712,9 @@ document
     );
 
 
-/* ==========================================
-   LOAD DATA WHEN WEBSITE STARTS
-========================================== */
+/* ========================================
+   LOAD REPORTS WHEN WEBSITE STARTS
+======================================== */
 
 loadDogs();
 
