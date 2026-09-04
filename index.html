@@ -3,1985 +3,920 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<meta
-    name="description"
-    content="Santa Cruz Find My Dog - Helping lost and found dogs reunite with their families."
->
+    <title>Santa Cruz Find My Dog</title>
 
-<title>Santa Cruz Find My Dog</title>
 
+    <style>
 
-<style>
+        /* ==========================================
+           GENERAL
+        ========================================== */
 
-/* =========================================================
-   VARIABLES
-========================================================= */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-:root {
 
-    --bg: #e7d9c5;
-    --bg-light: #f2e8d8;
+        :root {
+            --bg: #e7d9c5;
+            --light: #f5ede2;
+            --card: #fffaf4;
+            --dark: #3e3028;
+            --brown: #72594a;
+            --accent: #b98a5a;
+            --lost: #c65f4b;
+            --found: #5f8a62;
+            --border: rgba(62, 48, 40, 0.12);
+        }
 
-    --card: #f8f1e7;
 
-    --dark: #3e3028;
-    --dark-2: #30241d;
+        html {
+            scroll-behavior: smooth;
+        }
 
-    --brown: #6d5544;
 
-    --caramel: #b98a5a;
+        body {
 
-    --tan: #d9be9c;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
-    --lost: #c86750;
+            background: var(--bg);
 
-    --found: #6e8b61;
+            color: var(--dark);
 
-    --line: rgba(62, 48, 40, .12);
+        }
 
-    --shadow:
-        0 16px 45px
-        rgba(62, 48, 40, .12);
 
-    --shadow-small:
-        0 10px 30px
-        rgba(62, 48, 40, .08);
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
 
-    --radius: 26px;
 
-}
+        button {
+            cursor: pointer;
+        }
 
 
-/* =========================================================
-   RESET
-========================================================= */
+        img {
+            max-width: 100%;
+        }
 
-* {
 
-    box-sizing: border-box;
+        .container {
 
-    margin: 0;
+            width:
+                min(1150px, calc(100% - 32px));
 
-    padding: 0;
+            margin: auto;
 
-}
+        }
 
 
-html {
+        /* ==========================================
+           HEADER
+        ========================================== */
 
-    scroll-behavior: smooth;
+        header {
 
-}
+            position: sticky;
 
+            top: 0;
 
-body {
+            z-index: 1000;
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+            background:
+                rgba(231, 217, 197, 0.96);
 
-    background:
-        var(--bg);
+            backdrop-filter: blur(12px);
 
-    color:
-        var(--dark);
+            border-bottom:
+                1px solid var(--border);
 
-    line-height:
-        1.5;
+        }
 
-}
 
+        nav {
 
-button,
-input,
-select,
-textarea {
+            min-height: 75px;
 
-    font: inherit;
+            display: flex;
 
-}
+            justify-content: space-between;
 
+            align-items: center;
 
-button {
+        }
 
-    cursor: pointer;
 
-}
+        .brand {
 
+            display: flex;
 
-img {
+            align-items: center;
 
-    max-width: 100%;
+            gap: 10px;
 
-}
+            font-weight: 900;
 
+            font-size: 18px;
 
-a {
+        }
 
-    color: inherit;
 
-}
+        .brand-icon {
 
+            background: var(--dark);
 
-/* =========================================================
-   CONTAINER
-========================================================= */
+            color: white;
 
-.container {
+            width: 43px;
 
-    width:
-        min(
-            1120px,
-            calc(100% - 32px)
-        );
+            height: 43px;
 
-    margin:
-        auto;
+            border-radius: 14px;
 
-}
+            display: grid;
 
+            place-items: center;
 
-/* =========================================================
-   HEADER
-========================================================= */
+        }
 
-header {
 
-    position:
-        sticky;
+        .nav-links {
 
-    top:
-        0;
+            display: flex;
 
-    z-index:
-        1000;
+            gap: 8px;
 
-    background:
-        rgba(231, 217, 197, .94);
+        }
 
-    backdrop-filter:
-        blur(12px);
 
-    border-bottom:
-        1px solid var(--line);
+        .nav-links button {
 
-}
+            border: none;
 
+            background: transparent;
 
-nav {
+            padding: 10px 15px;
 
-    min-height:
-        74px;
+            font-weight: 700;
 
-    display:
-        flex;
+            color: var(--dark);
 
-    align-items:
-        center;
+            border-radius: 12px;
 
-    justify-content:
-        space-between;
+        }
 
-    gap:
-        24px;
 
-}
+        .nav-links button:hover {
 
+            background: var(--light);
 
-.brand {
+        }
 
-    display:
-        flex;
 
-    align-items:
-        center;
+        /* ==========================================
+           PAGES
+        ========================================== */
 
-    gap:
-        10px;
+        .page {
+            display: none;
+        }
 
-    font-weight:
-        800;
 
-    text-decoration:
-        none;
+        .page.active {
+            display: block;
+        }
 
-}
 
+        /* ==========================================
+           HERO
+        ========================================== */
 
-.brand-icon {
+        .hero {
 
-    width:
-        42px;
+            min-height: 600px;
 
-    height:
-        42px;
+            display: grid;
 
-    border-radius:
-        14px;
+            grid-template-columns: 1fr 1fr;
 
-    display:
-        grid;
+            align-items: center;
 
-    place-items:
-        center;
+            gap: 60px;
 
-    background:
-        var(--dark);
+            padding: 60px 0;
 
-    color:
-        white;
+        }
 
-    font-size:
-        21px;
 
-}
+        .eyebrow {
 
+            display: block;
 
-.nav-links {
+            font-size: 12px;
 
-    display:
-        flex;
+            font-weight: 900;
 
-    align-items:
-        center;
+            letter-spacing: 2px;
 
-    gap:
-        8px;
+            color: var(--brown);
 
-}
+            margin-bottom: 15px;
 
+            text-transform: uppercase;
 
-.nav-links button {
+        }
 
-    border:
-        0;
 
-    background:
-        transparent;
+        .hero h1 {
 
-    color:
-        var(--dark);
+            font-family: Georgia, serif;
 
-    font-weight:
-        700;
+            font-size: clamp(55px, 7vw, 90px);
 
-    padding:
-        10px 14px;
+            line-height: 0.95;
 
-    border-radius:
-        12px;
+            margin-bottom: 25px;
 
-}
+        }
 
 
-.nav-links button:hover {
+        .hero h1 span {
 
-    background:
-        var(--bg-light);
+            color: var(--accent);
 
-}
+        }
 
 
-.menu-btn {
+        .hero p {
 
-    display:
-        none;
+            font-size: 18px;
 
-    border:
-        0;
+            color: #6f6156;
 
-    background:
-        transparent;
+            line-height: 1.7;
 
-    font-size:
-        27px;
+        }
 
-    color:
-        var(--dark);
 
-}
+        .hero-buttons {
 
+            display: flex;
 
-/* =========================================================
-   PAGES
-========================================================= */
+            gap: 12px;
 
-.page {
+            flex-wrap: wrap;
 
-    display:
-        none;
+            margin-top: 30px;
 
-}
+        }
 
 
-.page.active {
+        /* ==========================================
+           BUTTONS
+        ========================================== */
 
-    display:
-        block;
+        .btn {
 
-}
+            border: none;
 
+            padding: 15px 22px;
 
-/* =========================================================
-   HERO
-========================================================= */
+            border-radius: 14px;
 
-.hero {
+            font-weight: 800;
 
-    min-height:
-        650px;
+            transition: 0.2s;
 
-    display:
-        grid;
+        }
 
-    grid-template-columns:
-        1.05fr .95fr;
 
-    gap:
-        58px;
+        .btn:hover {
 
-    align-items:
-        center;
+            transform: translateY(-2px);
 
-    padding:
-        75px 0;
+        }
 
-}
 
+        .btn-primary {
 
-.eyebrow {
+            background: var(--dark);
 
-    display:
-        inline-block;
+            color: white;
 
-    font-size:
-        12px;
+        }
 
-    font-weight:
-        900;
 
-    letter-spacing:
-        .15em;
+        .btn-secondary {
 
-    text-transform:
-        uppercase;
+            background: var(--light);
 
-    color:
-        var(--brown);
+            color: var(--dark);
 
-    margin-bottom:
-        12px;
+            border:
+                1px solid var(--border);
 
-}
+        }
 
 
-.hero h1 {
+        /* ==========================================
+           HERO IMAGE
+        ========================================== */
 
-    font-family:
-        Georgia,
-        serif;
+        .hero-image {
 
-    font-size:
-        clamp(
-            52px,
-            7vw,
-            94px
-        );
+            background: var(--card);
 
-    line-height:
-        .98;
+            padding: 18px;
 
-    margin-bottom:
-        22px;
+            border-radius: 30px;
 
-    letter-spacing:
-        -.04em;
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.12);
 
-}
+        }
 
 
-.hero h1 span {
+        .hero-image img {
 
-    color:
-        var(--caramel);
+            width: 100%;
 
-}
+            aspect-ratio: 4 / 3;
 
+            object-fit: cover;
 
-.hero p {
+            border-radius: 22px;
 
-    max-width:
-        590px;
+        }
 
-    font-size:
-        18px;
 
-    line-height:
-        1.7;
+        /* ==========================================
+           PAGE TITLE
+        ========================================== */
 
-    color:
-        #6f6156;
+        .page-content {
 
-}
+            padding: 65px 0 100px;
 
+        }
 
-.hero-actions {
 
-    display:
-        flex;
+        .page-title {
 
-    flex-wrap:
-        wrap;
+            font-family: Georgia, serif;
 
-    gap:
-        12px;
+            font-size: clamp(48px, 6vw, 75px);
 
-    margin-top:
-        28px;
+            margin-bottom: 12px;
 
-}
+        }
 
 
-/* =========================================================
-   BUTTONS
-========================================================= */
+        .page-subtitle {
 
-.btn {
+            color: #75665b;
 
-    border:
-        0;
+            font-size: 17px;
 
-    border-radius:
-        16px;
+        }
 
-    padding:
-        15px 20px;
 
-    font-weight:
-        800;
+        /* ==========================================
+           FILTERS
+        ========================================== */
 
-    transition:
-        .2s;
+        .filters {
 
-}
+            display: grid;
 
+            grid-template-columns: 1.5fr 1fr 1fr;
 
-.btn:hover {
+            gap: 15px;
 
-    transform:
-        translateY(-2px);
+            background: var(--card);
 
-}
+            padding: 20px;
 
+            border-radius: 24px;
 
-.btn-primary {
+            margin: 35px 0 25px;
 
-    background:
-        var(--dark);
+            border:
+                1px solid var(--border);
 
-    color:
-        white;
+        }
 
-    box-shadow:
-        0 10px 28px
-        rgba(62, 48, 40, .20);
 
-}
+        .filter-group label {
 
+            display: block;
 
-.btn-secondary {
+            font-size: 12px;
 
-    background:
-        var(--bg-light);
+            font-weight: 900;
 
-    color:
-        var(--dark);
+            letter-spacing: 1px;
 
-    border:
-        1px solid var(--line);
+            margin-bottom: 8px;
 
-}
+        }
 
 
-/* =========================================================
-   HERO IMAGE
-========================================================= */
+        input,
+        textarea,
+        select {
 
-.hero-card {
+            width: 100%;
 
-    background:
-        var(--card);
+            padding: 13px;
 
-    padding:
-        18px;
+            border-radius: 12px;
 
-    border-radius:
-        34px;
+            border:
+                1px solid var(--border);
 
-    box-shadow:
-        var(--shadow);
+            background: var(--light);
 
-    position:
-        relative;
+            color: var(--dark);
 
-}
+            outline: none;
 
+        }
 
-.dog-visual {
 
-    aspect-ratio:
-        4 / 3;
+        input:focus,
+        textarea:focus,
+        select:focus {
 
-    border-radius:
-        24px;
+            border-color: var(--accent);
 
-    overflow:
-        hidden;
+        }
 
-}
 
+        /* ==========================================
+           DOG GRID
+        ========================================== */
 
-.dog-image {
+        .dog-grid {
 
-    width:
-        100%;
+            display: grid;
 
-    height:
-        100%;
+            grid-template-columns:
+                repeat(3, 1fr);
 
-    object-fit:
-        cover;
+            gap: 22px;
 
-    display:
-        block;
+        }
 
-    border-radius:
-        24px;
 
-}
+        .dog-card {
 
+            background: var(--card);
 
-.hero-tag {
+            border-radius: 24px;
 
-    position:
-        absolute;
+            overflow: hidden;
 
-    left:
-        50%;
+            border:
+                1px solid var(--border);
 
-    bottom:
-        -18px;
+            transition: 0.2s;
 
-    transform:
-        translateX(-50%);
+        }
 
-    background:
-        var(--bg-light);
 
-    border:
-        1px solid var(--line);
+        .dog-card:hover {
 
-    padding:
-        10px 18px;
+            transform: translateY(-5px);
 
-    border-radius:
-        999px;
+        }
 
-    font-weight:
-        800;
 
-    white-space:
-        nowrap;
+        .dog-card-image {
 
-    box-shadow:
-        0 8px 20px
-        rgba(62, 48, 40, .08);
+            width: 100%;
 
-}
+            height: 230px;
 
+            object-fit: cover;
 
-/* =========================================================
-   QUICK CARDS
-========================================================= */
+            display: block;
 
-.quick-grid {
+            background: #ddd;
 
-    display:
-        grid;
+        }
 
-    grid-template-columns:
-        repeat(3, 1fr);
 
-    gap:
-        20px;
+        .dog-card-body {
 
-    margin-bottom:
-        78px;
+            padding: 22px;
 
-}
+        }
 
 
-.quick-card {
+        .dog-card-top {
 
-    background:
-        var(--card);
+            display: flex;
 
-    border:
-        1px solid var(--line);
+            justify-content: space-between;
 
-    border-radius:
-        var(--radius);
+            gap: 10px;
 
-    padding:
-        28px;
+        }
 
-    box-shadow:
-        var(--shadow-small);
 
-}
+        .dog-card h3 {
 
+            font-family: Georgia, serif;
 
-.quick-icon {
+            font-size: 28px;
 
-    width:
-        56px;
+        }
 
-    height:
-        56px;
 
-    display:
-        grid;
+        .badge {
 
-    place-items:
-        center;
+            font-size: 11px;
 
-    border-radius:
-        18px;
+            font-weight: 900;
 
-    background:
-        var(--bg-light);
+            padding: 7px 10px;
 
-    font-size:
-        27px;
+            border-radius: 999px;
 
-    margin-bottom:
-        18px;
+            height: fit-content;
 
-}
+        }
 
 
-.quick-card h2 {
+        .lost {
 
-    font-family:
-        Georgia,
-        serif;
+            background:
+                rgba(198,95,75,0.15);
 
-    margin-bottom:
-        10px;
+            color: var(--lost);
 
-}
+        }
 
 
-.quick-card p {
+        .found {
 
-    color:
-        #75665b;
+            background:
+                rgba(95,138,98,0.15);
 
-    line-height:
-        1.6;
+            color: var(--found);
 
-    min-height:
-        76px;
+        }
 
-}
 
+        .dog-info {
 
-.text-link {
+            margin-top: 15px;
 
-    border:
-        0;
+            color: #6d5d51;
 
-    background:
-        transparent;
+            line-height: 1.6;
 
-    padding:
-        0;
+        }
 
-    color:
-        var(--dark);
 
-    font-weight:
-        800;
+        .dog-info strong {
 
-}
+            color: var(--dark);
 
+        }
 
-.text-link:hover {
 
-    text-decoration:
-        underline;
+        .dog-actions {
 
-}
+            margin-top: 20px;
 
+            display: flex;
 
-/* =========================================================
-   HOW IT WORKS
-========================================================= */
+            justify-content: space-between;
 
-.how {
+            align-items: center;
 
-    background:
-        var(--dark);
+        }
 
-    color:
-        white;
 
-    padding:
-        78px 0;
+        .view-button {
 
-}
+            border: none;
 
+            background: transparent;
 
-.how .eyebrow {
+            font-weight: 800;
 
-    color:
-        var(--tan);
+            color: var(--dark);
 
-}
+        }
 
 
-.section-title {
+        /* ==========================================
+           REPORT FORM
+        ========================================== */
 
-    font-family:
-        Georgia,
-        serif;
+        .report-container {
 
-    font-size:
-        clamp(
-            36px,
-            5vw,
-            56px
-        );
+            max-width: 850px;
 
-    margin-bottom:
-        8px;
+            margin: auto;
 
-}
+        }
 
 
-.steps {
+        .report-form {
 
-    display:
-        grid;
+            margin-top: 30px;
 
-    grid-template-columns:
-        repeat(5, 1fr);
+            padding: 32px;
 
-    gap:
-        14px;
+            background: var(--card);
 
-    margin-top:
-        34px;
+            border-radius: 28px;
 
-}
+            border:
+                1px solid var(--border);
 
+        }
 
-.step {
 
-    background:
-        rgba(255, 255, 255, .07);
+        .form-grid {
 
-    border:
-        1px solid
-        rgba(255, 255, 255, .10);
+            display: grid;
 
-    border-radius:
-        20px;
+            grid-template-columns: 1fr 1fr;
 
-    padding:
-        20px;
+            gap: 18px;
 
-    min-height:
-        190px;
+        }
 
-}
 
+        .full {
+            grid-column: 1 / -1;
+        }
 
-.step .num {
 
-    width:
-        30px;
+        .form-group label {
 
-    height:
-        30px;
+            display: block;
 
-    display:
-        grid;
+            margin-bottom: 8px;
 
-    place-items:
-        center;
+            font-weight: 800;
 
-    border-radius:
-        50%;
+        }
 
-    background:
-        var(--caramel);
 
-    font-weight:
-        800;
+        .status-options {
 
-    margin-bottom:
-        22px;
+            display: flex;
 
-}
+            gap: 10px;
 
+        }
 
-.step .emoji {
 
-    font-size:
-        26px;
+        .status-options label {
 
-    margin-bottom:
-        12px;
+            flex: 1;
 
-}
+        }
 
 
-.step p {
+        .status-options input {
 
-    color:
-        rgba(255,255,255,.66);
+            display: none;
 
-    font-size:
-        14px;
+        }
 
-}
 
+        .status-option {
 
-/* =========================================================
-   RECENT
-========================================================= */
+            display: block;
 
-.recent {
+            text-align: center;
 
-    padding:
-        78px 0 95px;
+            padding: 14px;
 
-}
+            border-radius: 12px;
 
+            background: var(--light);
 
-.heading-row {
+            border:
+                1px solid var(--border);
 
-    display:
-        flex;
+            font-weight: 800;
 
-    align-items:
-        flex-end;
+        }
 
-    justify-content:
-        space-between;
 
-    gap:
-        20px;
+        .status-options input:checked
+        + .status-option {
 
-    margin-bottom:
-        26px;
+            outline:
+                2px solid var(--accent);
 
-}
+        }
 
 
-/* =========================================================
-   PAGE SHELL
-========================================================= */
+        .image-preview {
 
-.page-shell {
+            margin-top: 15px;
 
-    padding:
-        66px 0 95px;
+            display: none;
 
-    min-height:
-        75vh;
+            width: 100%;
 
-}
+            max-height: 300px;
 
+            object-fit: cover;
 
-.page-heading h1 {
+            border-radius: 15px;
 
-    font-family:
-        Georgia,
-        serif;
+        }
 
-    font-size:
-        clamp(
-            48px,
-            6vw,
-            76px
-        );
 
-    margin-bottom:
-        10px;
+        .form-status {
 
-}
+            margin-top: 15px;
 
+            text-align: center;
 
-.page-heading p {
+            font-weight: 800;
 
-    color:
-        #75665b;
+        }
 
-    font-size:
-        17px;
 
-}
+        .success {
 
+            color: var(--found);
 
-/* =========================================================
-   FILTERS
-========================================================= */
+        }
 
-.filter-panel {
 
-    background:
-        var(--card);
+        .error {
 
-    border:
-        1px solid var(--line);
+            color: var(--lost);
 
-    border-radius:
-        24px;
+        }
 
-    padding:
-        20px;
 
-    display:
-        grid;
+        /* ==========================================
+           EMPTY
+        ========================================== */
 
-    grid-template-columns:
-        1.4fr 1fr .8fr;
+        .empty {
 
-    gap:
-        16px;
+            grid-column: 1 / -1;
 
-    align-items:
-        end;
+            text-align: center;
 
-    box-shadow:
-        var(--shadow-small);
+            padding: 60px 20px;
 
-    margin:
-        30px 0 22px;
+            background: var(--card);
 
-}
+            border-radius: 25px;
 
+        }
 
-.filter-label {
 
-    display:
-        block;
+        /* ==========================================
+           DETAILS
+        ========================================== */
 
-    font-size:
-        12px;
+        .details-card {
 
-    font-weight:
-        800;
+            max-width: 900px;
 
-    color:
-        var(--brown);
+            margin: auto;
 
-    margin-bottom:
-        8px;
+            background: var(--card);
 
-    text-transform:
-        uppercase;
+            border-radius: 30px;
 
-    letter-spacing:
-        .08em;
+            overflow: hidden;
 
-}
+        }
 
 
-.search-box {
+        .details-image {
 
-    display:
-        flex;
+            width: 100%;
 
-    align-items:
-        center;
+            max-height: 500px;
 
-    gap:
-        10px;
+            object-fit: cover;
 
-    height:
-        48px;
+        }
 
-    background:
-        var(--bg-light);
 
-    border-radius:
-        14px;
+        .details-content {
 
-    padding:
-        0 14px;
+            padding: 40px;
 
-}
+        }
 
 
-.search-box input {
+        .details-content h1 {
 
-    flex:
-        1;
+            font-family: Georgia, serif;
 
-    border:
-        0;
+            font-size: 60px;
 
-    outline:
-        0;
+            margin: 15px 0 25px;
 
-    background:
-        transparent;
+        }
 
-}
 
+        .detail-row {
 
-.filter-buttons {
+            padding: 16px 0;
 
-    display:
-        flex;
+            border-bottom:
+                1px solid var(--border);
 
-    gap:
-        7px;
+        }
 
-    flex-wrap:
-        wrap;
 
-}
+        .detail-row strong {
 
+            display: block;
 
-.filter-btn {
+            font-size: 12px;
 
-    border:
-        1px solid var(--line);
+            letter-spacing: 1px;
 
-    background:
-        var(--bg-light);
+            margin-bottom: 5px;
 
-    color:
-        var(--dark);
+            color: var(--brown);
 
-    padding:
-        10px 12px;
+        }
 
-    border-radius:
-        12px;
 
-    font-weight:
-        800;
+        /* ==========================================
+           MOBILE
+        ========================================== */
 
-}
+        @media (max-width: 850px) {
 
+            .hero {
+                grid-template-columns: 1fr;
+            }
 
-.filter-btn.active {
+            .dog-grid {
+                grid-template-columns: 1fr 1fr;
+            }
 
-    background:
-        var(--dark);
+            .filters {
+                grid-template-columns: 1fr;
+            }
 
-    color:
-        white;
+        }
 
-}
 
+        @media (max-width: 600px) {
 
-select,
-input,
-textarea {
+            .dog-grid {
+                grid-template-columns: 1fr;
+            }
 
-    width:
-        100%;
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
 
-    background:
-        var(--bg-light);
+            .full {
+                grid-column: auto;
+            }
 
-    border:
-        1px solid var(--line);
+            .nav-links {
+                gap: 0;
+            }
 
-    border-radius:
-        14px;
+            .nav-links button {
+                padding: 8px;
+                font-size: 12px;
+            }
 
-    padding:
-        13px 14px;
+        }
 
-    color:
-        var(--dark);
-
-    outline:
-        none;
-
-}
-
-
-textarea {
-
-    resize:
-        vertical;
-
-}
-
-
-select:focus,
-input:focus,
-textarea:focus {
-
-    border-color:
-        var(--caramel);
-
-}
-
-
-.results-row {
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    align-items:
-        center;
-
-    margin:
-        16px 2px 22px;
-
-    color:
-        var(--brown);
-
-}
-
-
-/* =========================================================
-   DOG CARDS
-========================================================= */
-
-.dog-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap:
-        22px;
-
-}
-
-
-.dog-card {
-
-    background:
-        var(--card);
-
-    border:
-        1px solid var(--line);
-
-    border-radius:
-        24px;
-
-    overflow:
-        hidden;
-
-    box-shadow:
-        0 12px 32px
-        rgba(62, 48, 40, .08);
-
-}
-
-
-.dog-card:hover {
-
-    transform:
-        translateY(-5px);
-
-}
-
-
-.dog-card-body {
-
-    padding:
-        26px;
-
-}
-
-
-.card-top {
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    align-items:
-        flex-start;
-
-    gap:
-        12px;
-
-}
-
-
-.card-top h3 {
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:
-        28px;
-
-    line-height:
-        1.1;
-
-}
-
-
-.badge {
-
-    font-size:
-        11px;
-
-    font-weight:
-        900;
-
-    padding:
-        7px 10px;
-
-    border-radius:
-        999px;
-
-    letter-spacing:
-        .07em;
-
-    white-space:
-        nowrap;
-
-}
-
-
-.badge.lost {
-
-    background:
-        rgba(200,103,80,.14);
-
-    color:
-        #a64837;
-
-}
-
-
-.badge.found {
-
-    background:
-        rgba(110,139,97,.15);
-
-    color:
-        #536f48;
-
-}
-
-
-.meta {
-
-    color:
-        var(--brown);
-
-    font-size:
-        14px;
-
-    margin-top:
-        14px;
-
-}
-
-
-.breed-info {
-
-    margin-top:
-        18px;
-
-    padding-top:
-        16px;
-
-    border-top:
-        1px solid var(--line);
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    gap:
-        4px;
-
-}
-
-
-.breed-label {
-
-    font-size:
-        11px;
-
-    font-weight:
-        900;
-
-    letter-spacing:
-        .12em;
-
-    color:
-        var(--brown);
-
-}
-
-
-.breed-name {
-
-    font-size:
-        17px;
-
-    font-weight:
-        800;
-
-}
-
-
-.dog-description {
-
-    color:
-        #706157;
-
-    line-height:
-        1.55;
-
-    margin-top:
-        16px;
-
-    min-height:
-        50px;
-
-}
-
-
-.card-footer {
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    align-items:
-        center;
-
-    gap:
-        10px;
-
-    margin-top:
-        24px;
-
-}
-
-
-.date {
-
-    color:
-        #9a8778;
-
-    font-size:
-        12px;
-
-}
-
-
-/* =========================================================
-   EMPTY
-========================================================= */
-
-.empty-state {
-
-    grid-column:
-        1 / -1;
-
-    text-align:
-        center;
-
-    background:
-        var(--card);
-
-    border:
-        1px dashed var(--line);
-
-    border-radius:
-        24px;
-
-    padding:
-        55px 20px;
-
-}
-
-
-.empty-state-icon {
-
-    font-size:
-        45px;
-
-    margin-bottom:
-        15px;
-
-}
-
-
-.empty-state h3 {
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:
-        28px;
-
-    margin-bottom:
-        8px;
-
-}
-
-
-.empty-state p {
-
-    color:
-        #75665b;
-
-}
-
-
-/* =========================================================
-   DETAILS
-========================================================= */
-
-.details {
-
-    background:
-        var(--card);
-
-    border:
-        1px solid var(--line);
-
-    border-radius:
-        30px;
-
-    overflow:
-        hidden;
-
-    box-shadow:
-        var(--shadow);
-
-}
-
-
-.details-info {
-
-    padding:
-        48px;
-
-}
-
-
-.details-info h1 {
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:
-        64px;
-
-    margin:
-        12px 0 26px;
-
-}
-
-
-.detail-item {
-
-    padding:
-        17px 0;
-
-    border-bottom:
-        1px solid var(--line);
-
-}
-
-
-.detail-item strong {
-
-    display:
-        block;
-
-    font-size:
-        11px;
-
-    letter-spacing:
-        .1em;
-
-    text-transform:
-        uppercase;
-
-    color:
-        var(--brown);
-
-    margin-bottom:
-        5px;
-
-}
-
-
-/* =========================================================
-   REPORT
-========================================================= */
-
-.report-wrap {
-
-    max-width:
-        860px;
-
-    margin:
-        auto;
-
-}
-
-
-.center {
-
-    text-align:
-        center;
-
-}
-
-
-.report-form {
-
-    background:
-        var(--card);
-
-    border:
-        1px solid var(--line);
-
-    border-radius:
-        30px;
-
-    padding:
-        32px;
-
-    box-shadow:
-        var(--shadow);
-
-    margin-top:
-        28px;
-
-}
-
-
-.form-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:
-        18px;
-
-}
-
-
-.full {
-
-    grid-column:
-        1 / -1;
-
-}
-
-
-label span,
-legend {
-
-    display:
-        block;
-
-    font-weight:
-        800;
-
-    margin-bottom:
-        8px;
-
-}
-
-
-fieldset {
-
-    border:
-        0;
-
-}
-
-
-.status-choice {
-
-    display:
-        flex;
-
-    gap:
-        10px;
-
-}
-
-
-.status-choice label {
-
-    flex:
-        1;
-
-}
-
-
-.status-choice input {
-
-    display:
-        none;
-
-}
-
-
-.status-box {
-
-    display:
-        block;
-
-    text-align:
-        center;
-
-    padding:
-        13px;
-
-    background:
-        var(--bg-light);
-
-    border:
-        1px solid var(--line);
-
-    border-radius:
-        14px;
-
-    font-weight:
-        800;
-
-}
-
-
-.status-choice input:checked + .lost-box {
-
-    outline:
-        2px solid var(--lost);
-
-}
-
-
-.status-choice input:checked + .found-box {
-
-    outline:
-        2px solid var(--found);
-
-}
-
-
-.form-success {
-
-    color:
-        var(--found);
-
-}
-
-
-.form-error {
-
-    color:
-        var(--lost);
-
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer {
-
-    background:
-        var(--dark-2);
-
-    color:
-        white;
-
-    padding:
-        44px 0 20px;
-
-}
-
-
-.footer-grid {
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    gap:
-        30px;
-
-    align-items:
-        center;
-
-}
-
-
-.footer-grid p {
-
-    color:
-        rgba(255,255,255,.62);
-
-    margin-top:
-        12px;
-
-}
-
-
-.footer-links {
-
-    display:
-        flex;
-
-    gap:
-        16px;
-
-    flex-wrap:
-        wrap;
-
-}
-
-
-.footer-links button {
-
-    border:
-        0;
-
-    background:
-        transparent;
-
-    color:
-        white;
-
-    font-weight:
-        700;
-
-}
-
-
-.footer-bottom {
-
-    text-align:
-        center;
-
-    padding-top:
-        20px;
-
-    margin-top:
-        25px;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,.08);
-
-    color:
-        rgba(255,255,255,.58);
-
-    font-size:
-        13px;
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .hero {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-    .quick-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-    .steps {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-    .dog-grid {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-    .filter-panel {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-}
-
-
-@media (max-width: 650px) {
-
-    .container {
-
-        width:
-            calc(100% - 24px);
-
-    }
-
-    .menu-btn {
-
-        display:
-            block;
-
-    }
-
-    .nav-links {
-
-        display:
-            none;
-
-        position:
-            absolute;
-
-        top:
-            74px;
-
-        left:
-            12px;
-
-        right:
-            12px;
-
-        background:
-            var(--card);
-
-        border:
-            1px solid var(--line);
-
-        border-radius:
-            18px;
-
-        padding:
-            16px;
-
-        flex-direction:
-            column;
-
-    }
-
-    .nav-links.open {
-
-        display:
-            flex;
-
-    }
-
-    .dog-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-    .form-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-    .full {
-
-        grid-column:
-            auto;
-
-    }
-
-    .steps {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-    .filter-panel {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-    .details-info {
-
-        padding:
-            30px 24px;
-
-    }
-
-    .details-info h1 {
-
-        font-size:
-            48px;
-
-    }
-
-}
-
-</style>
+    </style>
 
 </head>
 
@@ -1989,66 +924,42 @@ footer {
 <body>
 
 
-<!-- =========================================================
+<!-- ==========================================
      HEADER
-========================================================= -->
+========================================== -->
 
 <header>
 
-<nav class="container">
+    <nav class="container">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🐶
+            </div>
+
+            Santa Cruz Pet Finder
+
+        </div>
 
 
-<a
-    href="#"
-    class="brand"
-    onclick="showPage('home'); return false;"
->
+        <div class="nav-links">
 
-    <span class="brand-icon">
-        🐶
-    </span>
+            <button onclick="showPage('home')">
+                Home
+            </button>
 
-    <span>
-        Santa Cruz Find My Dog
-    </span>
+            <button onclick="showPage('find')">
+                Find a Dog
+            </button>
 
-</a>
+            <button onclick="showPage('report')">
+                Report a Dog
+            </button>
 
+        </div>
 
-<button
-    class="menu-btn"
-    id="menuBtn"
->
-
-    ☰
-
-</button>
-
-
-<div
-    class="nav-links"
-    id="navLinks"
->
-
-    <button onclick="showPage('home')">
-        Home
-    </button>
-
-    <button onclick="showPage('find')">
-        Find a Dog
-    </button>
-
-    <button onclick="showPage('report')">
-        Report a Dog
-    </button>
-
-    <button onclick="goHow()">
-        How It Works
-    </button>
-
-</div>
-
-</nav>
+    </nav>
 
 </header>
 
@@ -2057,9 +968,9 @@ footer {
 <main>
 
 
-<!-- =========================================================
-     HOME
-========================================================= -->
+<!-- ==========================================
+     HOME PAGE
+========================================== -->
 
 <section
     id="homePage"
@@ -2067,826 +978,597 @@ footer {
 >
 
 
-<div class="container hero">
+    <div class="container hero">
 
 
-<div>
+        <div>
 
-    <span class="eyebrow">
-        Lost & Found in Santa Cruz
-    </span>
-
-
-    <h1>
-
-        Find Them.<br>
-
-        <span>
-            Bring Them Home.
-        </span>
-
-    </h1>
+            <span class="eyebrow">
+                LOST & FOUND • SANTA CRUZ
+            </span>
 
 
-    <p>
+            <h1>
 
-        Helping Santa Cruz reunite lost dogs
-        with their families. Search for dogs
-        in your area or create a report.
+                Find Them.
 
-    </p>
+                <br>
 
+                <span>
+                    Bring Them Home.
+                </span>
 
-    <div class="hero-actions">
-
-        <button
-            class="btn btn-primary"
-            onclick="showPage('find')"
-        >
-
-            🔎 Find a Dog
-
-        </button>
+            </h1>
 
 
-        <button
-            class="btn btn-secondary"
-            onclick="showPage('report')"
-        >
+            <p>
 
-            📝 Report a Dog
+                Help reunite lost pets with their
+                families in Santa Cruz de la Sierra.
 
-        </button>
+                Search reports, share information,
+                and help a pet find its way home.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <button
+                    class="btn btn-primary"
+                    onclick="showPage('find')"
+                >
+
+                    🔎 Find a Dog
+
+                </button>
+
+
+                <button
+                    class="btn btn-secondary"
+                    onclick="showPage('report')"
+                >
+
+                    📝 Report a Dog
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img
+                src="dgs.webp"
+                alt="Dogs"
+            >
+
+        </div>
+
 
     </div>
-
-</div>
-
-
-<div class="hero-card">
-
-    <div class="dog-visual">
-
-        <img
-            src="dgs.webp"
-            alt="Dogs"
-            class="dog-image"
-        >
-
-    </div>
-
-
-    <div class="hero-tag">
-
-        🐾 Reunions start here
-
-    </div>
-
-</div>
-
-
-</div>
-
-
-
-<!-- QUICK CARDS -->
-
-<div class="container quick-grid">
-
-
-<article class="quick-card">
-
-    <div class="quick-icon">
-        🐕
-    </div>
-
-    <h2>
-        Lost a Dog?
-    </h2>
-
-    <p>
-        Create a report so people in
-        Santa Cruz can help find your pet.
-    </p>
-
-    <button
-        class="text-link"
-        onclick="openReportWithStatus('lost')"
-    >
-        Report Lost Dog →
-    </button>
-
-</article>
-
-
-
-<article class="quick-card">
-
-    <div class="quick-icon">
-        🏠
-    </div>
-
-    <h2>
-        Found a Dog?
-    </h2>
-
-    <p>
-        Share the information so the owner
-        has a better chance of finding their dog.
-    </p>
-
-    <button
-        class="text-link"
-        onclick="openReportWithStatus('found')"
-    >
-        Report Found Dog →
-    </button>
-
-</article>
-
-
-
-<article class="quick-card">
-
-    <div class="quick-icon">
-        🔎
-    </div>
-
-    <h2>
-        Search by Area
-    </h2>
-
-    <p>
-        Search reports from neighborhoods
-        throughout Santa Cruz.
-    </p>
-
-    <button
-        class="text-link"
-        onclick="showPage('find')"
-    >
-        Search Dogs →
-    </button>
-
-</article>
-
-
-</div>
-
-
-
-<!-- HOW IT WORKS -->
-
-<section
-    class="how"
-    id="howSection"
->
-
-<div class="container">
-
-<span class="eyebrow">
-    Simple & Fast
-</span>
-
-<h2 class="section-title">
-    How It Works
-</h2>
-
-
-<div class="steps">
-
-
-<div class="step">
-
-<div class="num">1</div>
-
-<div class="emoji">🔎</div>
-
-<h3>
-    Find a Dog
-</h3>
-
-<p>
-    Browse lost and found dog reports.
-</p>
-
-</div>
-
-
-
-<div class="step">
-
-<div class="num">2</div>
-
-<div class="emoji">📍</div>
-
-<h3>
-    Choose an Area
-</h3>
-
-<p>
-    Filter reports by neighborhood.
-</p>
-
-</div>
-
-
-
-<div class="step">
-
-<div class="num">3</div>
-
-<div class="emoji">📋</div>
-
-<h3>
-    Check Details
-</h3>
-
-<p>
-    Open the complete dog profile.
-</p>
-
-</div>
-
-
-
-<div class="step">
-
-<div class="num">4</div>
-
-<div class="emoji">📞</div>
-
-<h3>
-    Contact
-</h3>
-
-<p>
-    Use the contact information provided.
-</p>
-
-</div>
-
-
-
-<div class="step">
-
-<div class="num">5</div>
-
-<div class="emoji">❤️</div>
-
-<h3>
-    Report a Dog
-</h3>
-
-<p>
-    Help another dog find its way home.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- RECENT DOGS -->
-
-<section class="container recent">
-
-<div class="heading-row">
-
-<div>
-
-<span class="eyebrow">
-    Latest Reports
-</span>
-
-<h2 class="section-title">
-    Recently Reported Dogs
-</h2>
-
-</div>
-
-
-<button
-    class="text-link"
-    onclick="showPage('find')"
->
-    View All Dogs →
-</button>
-
-</div>
-
-
-<div
-    class="dog-grid"
-    id="recentDogs"
->
-</div>
-
-</section>
 
 
 </section>
 
 
 
-<!-- =========================================================
+<!-- ==========================================
      FIND PAGE
-========================================================= -->
+========================================== -->
 
 <section
     id="findPage"
     class="page"
 >
 
-<div class="container page-shell">
+
+    <div class="container page-content">
 
 
-<div class="page-heading">
-
-<span class="eyebrow">
-    Lost & Found Directory
-</span>
-
-<h1>
-    Find a Dog
-</h1>
-
-<p>
-    Search lost and found dogs reported
-    in Santa Cruz de la Sierra.
-</p>
-
-</div>
+        <span class="eyebrow">
+            LOST & FOUND DIRECTORY
+        </span>
 
 
-
-<div class="filter-panel">
-
-
-<label>
-
-<span class="filter-label">
-    Search
-</span>
+        <h1 class="page-title">
+            Find a Dog
+        </h1>
 
 
-<div class="search-box">
+        <p class="page-subtitle">
 
-🔎
+            Search lost and found pets
+            reported in Santa Cruz.
 
-<input
-    id="searchInput"
-    type="search"
-    placeholder="Search by name, breed, description or area..."
->
-
-</div>
-
-</label>
+        </p>
 
 
 
-<div>
+        <!-- FILTERS -->
 
-<span class="filter-label">
-    Status
-</span>
+        <div class="filters">
 
 
-<div class="filter-buttons">
+            <div class="filter-group">
 
-<button
-    class="filter-btn active"
-    data-status="all"
->
-    All
-</button>
+                <label>
+                    SEARCH
+                </label>
 
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Name, breed, description or area..."
+                >
 
-<button
-    class="filter-btn"
-    data-status="lost"
->
-    🔴 Lost
-</button>
-
-
-<button
-    class="filter-btn"
-    data-status="found"
->
-    🟢 Found
-</button>
-
-</div>
-
-</div>
+            </div>
 
 
 
-<label>
+            <div class="filter-group">
 
-<span class="filter-label">
-    Area
-</span>
+                <label>
+                    STATUS
+                </label>
 
+                <select id="statusFilter">
 
-<select id="areaFilter">
+                    <option value="all">
+                        All
+                    </option>
 
-<option value="all">
-    All Areas
-</option>
+                    <option value="lost">
+                        Lost
+                    </option>
 
-<option value="Equipetrol">
-    Equipetrol
-</option>
+                    <option value="found">
+                        Found
+                    </option>
 
-<option value="Urubó">
-    Urubó
-</option>
+                </select>
 
-<option value="Sirari">
-    Sirari
-</option>
-
-<option value="Plan 3000">
-    Plan 3000
-</option>
-
-<option value="Las Palmas">
-    Las Palmas
-</option>
-
-<option value="Urbarí">
-    Urbarí
-</option>
-
-<option value="Centro">
-    Centro
-</option>
-
-<option value="Other">
-    Other
-</option>
-
-</select>
-
-</label>
-
-
-</div>
+            </div>
 
 
 
-<div class="results-row">
+            <div class="filter-group">
 
-<span id="resultsCount">
-    0 reports
-</span>
+                <label>
+                    AREA
+                </label>
+
+                <select id="areaFilter">
+
+                    <option value="all">
+                        All Areas
+                    </option>
+
+                    <option>
+                        Equipetrol
+                    </option>
+
+                    <option>
+                        Urubó
+                    </option>
+
+                    <option>
+                        Sirari
+                    </option>
+
+                    <option>
+                        Las Palmas
+                    </option>
+
+                    <option>
+                        Urbarí
+                    </option>
+
+                    <option>
+                        Centro
+                    </option>
+
+                    <option>
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
 
 
-<button
-    class="text-link"
-    onclick="clearFilters()"
->
-    Clear filters
-</button>
-
-</div>
+        </div>
 
 
+        <div
+            class="dog-grid"
+            id="dogGrid"
+        >
+        </div>
 
-<div
-    class="dog-grid"
-    id="dogGrid"
->
-</div>
 
+    </div>
 
-</div>
 
 </section>
 
 
 
-<!-- =========================================================
+<!-- ==========================================
      DETAILS PAGE
-========================================================= -->
+========================================== -->
 
 <section
     id="detailsPage"
     class="page"
 >
 
-<div class="container page-shell">
+
+    <div class="container page-content">
 
 
-<button
-    class="text-link"
-    onclick="showPage('find')"
->
-    ← Back to Search
-</button>
+        <button
+            class="btn btn-secondary"
+            onclick="showPage('find')"
+        >
+
+            ← Back
+
+        </button>
 
 
-<br>
-<br>
+        <br>
+        <br>
 
 
-<div
-    class="details"
-    id="detailsBox"
->
-</div>
+        <div
+            id="detailsContainer"
+        >
+        </div>
 
 
-</div>
+    </div>
+
 
 </section>
 
 
 
-<!-- =========================================================
+<!-- ==========================================
      REPORT PAGE
-========================================================= -->
+========================================== -->
 
 <section
     id="reportPage"
     class="page"
 >
 
-<div class="container page-shell report-wrap">
 
+    <div class="container page-content">
 
-<div class="page-heading center">
 
-<span class="eyebrow">
-    Make a Report
-</span>
+        <div class="report-container">
 
 
-<h1>
-    Report a Dog
-</h1>
+            <span class="eyebrow">
+                MAKE A REPORT
+            </span>
 
 
-<p>
-    Every report can help a dog
-    find its way home.
-</p>
+            <h1 class="page-title">
+                Report a Dog
+            </h1>
 
-</div>
 
+            <p class="page-subtitle">
 
+                Add information and a photo to help
+                someone recognize and find this pet.
 
-<form
-    class="report-form"
-    id="reportForm"
->
+            </p>
 
 
-<div class="form-grid">
 
+            <form
+                id="reportForm"
+                class="report-form"
+            >
 
-<label>
 
-<span>
-    Dog Name
-</span>
+                <div class="form-grid">
 
-<input
-    type="text"
-    name="name"
-    placeholder="Dog's name, if known"
->
 
-</label>
+                    <!-- NAME -->
 
+                    <div class="form-group">
 
+                        <label>
+                            Dog Name
+                        </label>
 
-<label>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Name if known"
+                        >
 
-<span>
-    Breed
-</span>
+                    </div>
 
-<input
-    type="text"
-    name="breed"
-    placeholder="Example: Beagle, Husky, Golden Retriever"
->
 
-</label>
 
+                    <!-- BREED -->
 
+                    <div class="form-group">
 
-<fieldset>
+                        <label>
+                            Breed
+                        </label>
 
-<legend>
-    Status *
-</legend>
+                        <input
+                            type="text"
+                            name="breed"
+                            placeholder="Example: Golden Retriever"
+                        >
 
+                    </div>
 
-<div class="status-choice">
 
 
-<label>
+                    <!-- STATUS -->
 
-<input
-    type="radio"
-    name="status"
-    value="lost"
-    required
->
+                    <div class="form-group">
 
-<span class="status-box lost-box">
-    🔴 Lost
-</span>
+                        <label>
+                            Status *
+                        </label>
 
-</label>
 
+                        <div class="status-options">
 
 
-<label>
+                            <label>
 
-<input
-    type="radio"
-    name="status"
-    value="found"
-    required
->
+                                <input
+                                    type="radio"
+                                    name="status"
+                                    value="lost"
+                                    required
+                                >
 
-<span class="status-box found-box">
-    🟢 Found
-</span>
+                                <span class="status-option">
+                                    🔴 Lost
+                                </span>
 
-</label>
+                            </label>
 
 
-</div>
 
-</fieldset>
+                            <label>
 
+                                <input
+                                    type="radio"
+                                    name="status"
+                                    value="found"
+                                >
 
+                                <span class="status-option">
+                                    🟢 Found
+                                </span>
 
-<label>
+                            </label>
 
-<span>
-    Area / Neighborhood *
-</span>
 
+                        </div>
 
-<select
-    name="area"
-    required
->
+                    </div>
 
-<option value="">
-    Select an area
-</option>
 
-<option>Equipetrol</option>
 
-<option>Urubó</option>
+                    <!-- AREA -->
 
-<option>Sirari</option>
+                    <div class="form-group">
 
-<option>Plan 3000</option>
+                        <label>
+                            Area *
+                        </label>
 
-<option>Las Palmas</option>
 
-<option>Urbarí</option>
+                        <select
+                            name="area"
+                            required
+                        >
 
-<option>Centro</option>
+                            <option value="">
+                                Select an area
+                            </option>
 
-<option>Other</option>
+                            <option>
+                                Equipetrol
+                            </option>
 
-</select>
+                            <option>
+                                Urubó
+                            </option>
 
-</label>
+                            <option>
+                                Sirari
+                            </option>
 
+                            <option>
+                                Las Palmas
+                            </option>
 
+                            <option>
+                                Urbarí
+                            </option>
 
-<label>
+                            <option>
+                                Centro
+                            </option>
 
-<span>
-    Date *
-</span>
+                            <option>
+                                Other
+                            </option>
 
-<input
-    type="date"
-    name="date"
-    required
->
+                        </select>
 
-</label>
+                    </div>
 
 
 
-<label class="full">
+                    <!-- DATE -->
 
-<span>
-    Last Seen / Found Location *
-</span>
+                    <div class="form-group">
 
-<input
-    type="text"
-    name="location"
-    placeholder="Example: Near Equipetrol Plaza"
-    required
->
+                        <label>
+                            Date *
+                        </label>
 
-</label>
+                        <input
+                            type="date"
+                            name="date"
+                            required
+                        >
 
+                    </div>
 
 
-<label class="full">
 
-<span>
-    Description *
-</span>
+                    <!-- LOCATION -->
 
-<textarea
-    name="description"
-    rows="5"
-    placeholder="Color, size, collar, personality, distinctive features..."
-    required
-></textarea>
+                    <div class="form-group">
 
-</label>
+                        <label>
+                            Location *
+                        </label>
 
+                        <input
+                            type="text"
+                            name="location"
+                            placeholder="Where was the dog seen?"
+                            required
+                        >
 
+                    </div>
 
-<label>
 
-<span>
-    Contact Name *
-</span>
 
-<input
-    type="text"
-    name="contactName"
-    required
->
+                    <!-- DESCRIPTION -->
 
-</label>
+                    <div class="form-group full">
 
+                        <label>
+                            Description *
+                        </label>
 
+                        <textarea
+                            name="description"
+                            rows="5"
+                            placeholder="Color, size, collar, special characteristics..."
+                            required
+                        ></textarea>
 
-<label>
+                    </div>
 
-<span>
-    Phone Number *
-</span>
 
-<input
-    type="tel"
-    name="phone"
-    placeholder="+591..."
-    required
->
 
-</label>
+                    <!-- CONTACT NAME -->
 
+                    <div class="form-group">
 
-</div>
+                        <label>
+                            Contact Name *
+                        </label>
 
+                        <input
+                            type="text"
+                            name="contactName"
+                            required
+                        >
 
+                    </div>
 
-<button
-    type="submit"
-    class="btn btn-primary"
-    style="
-        width:100%;
-        margin-top:24px;
-    "
->
 
-    Submit Report
 
-</button>
+                    <!-- PHONE -->
 
+                    <div class="form-group">
 
-<p
-    id="formStatus"
-    style="
-        text-align:center;
-        font-weight:800;
-        margin-top:15px;
-    "
-></p>
+                        <label>
+                            Phone *
+                        </label>
 
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="+591..."
+                            required
+                        >
 
-</form>
+                    </div>
 
 
-</div>
+
+                    <!-- IMAGE -->
+
+                    <div class="form-group full">
+
+                        <label>
+                            Dog Image *
+                        </label>
+
+                        <input
+                            id="imageInput"
+                            type="file"
+                            accept="image/*"
+                            required
+                        >
+
+
+                        <img
+                            id="imagePreview"
+                            class="image-preview"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="submitButton"
+                    style="
+                        width:100%;
+                        margin-top:25px;
+                    "
+                >
+
+                    Submit Report
+
+                </button>
+
+
+                <p
+                    id="formStatus"
+                    class="form-status"
+                >
+                </p>
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
 
 </section>
 
@@ -2895,135 +1577,107 @@ footer {
 
 
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer>
-
-
-<div class="container footer-grid">
-
-
-<div>
-
-<div
-    class="brand"
-    style="color:white;"
->
-
-<span class="brand-icon">
-    🐶
-</span>
-
-<span>
-    Santa Cruz Find My Dog
-</span>
-
-</div>
-
-
-<p>
-    Helping Santa Cruz reunite
-    lost dogs with their families.
-</p>
-
-</div>
-
-
-
-<div class="footer-links">
-
-<button onclick="showPage('home')">
-    Home
-</button>
-
-<button onclick="showPage('find')">
-    Find a Dog
-</button>
-
-<button onclick="showPage('report')">
-    Report a Dog
-</button>
-
-</div>
-
-
-</div>
-
-
-
-<div class="footer-bottom">
-
-Made with ❤️ for the dogs of Santa Cruz.
-
-</div>
-
-
-</footer>
-
-
-
-<!-- =========================================================
-     JAVASCRIPT + FIREBASE
-========================================================= -->
+<!-- ==========================================
+     FIREBASE + JAVASCRIPT
+========================================== -->
 
 <script type="module">
 
 
-/* =========================================================
+/* ==========================================
    FIREBASE IMPORTS
-========================================================= */
+========================================== */
+
+
+/* FIREBASE APP */
 
 import {
     initializeApp
-} from
+}
+
+from
+
 "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 
+/* FIRESTORE */
+
 import {
+
     getFirestore,
+
     collection,
+
     addDoc,
+
     getDocs,
-    serverTimestamp
-} from
+
+    doc,
+
+    getDoc,
+
+    serverTimestamp,
+
+    query,
+
+    orderBy
+
+}
+
+from
+
 "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 
-/* =========================================================
+/* FIREBASE STORAGE */
+
+import {
+
+    getStorage,
+
+    ref,
+
+    uploadBytes,
+
+    getDownloadURL
+
+}
+
+from
+
+"https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
+
+
+/* ==========================================
    YOUR FIREBASE CONFIG
-========================================================= */
+========================================== */
 
 const firebaseConfig = {
 
     apiKey:
-        "AIzaSyDeaNkcpyEQVFiyELe68FvN4ozn38-A0",
+        "AIzaSyBGnLVJQVQo-K7UpAxJmN4RApo_rnKJ3-o",
 
     authDomain:
-        "theatre-booking-system-d45a7.firebaseapp.com",
+        "santa-cruz-pet-finder.firebaseapp.com",
 
     projectId:
-        "theatre-booking-system-d45a7",
+        "santa-cruz-pet-finder",
 
     storageBucket:
-        "theatre-booking-system-d45a7.firebasestorage.app",
+        "santa-cruz-pet-finder.firebasestorage.app",
 
     messagingSenderId:
-        "66972534681",
+        "959263106578",
 
     appId:
-        "1:66972534681:web:1995cb45236cf107ee3508",
-
-    measurementId:
-        "G-57HN14357H"
+        "1:959263106578:web:5aae588bea0bb9e3aedacb"
 
 };
 
 
-/* =========================================================
+/* ==========================================
    INITIALIZE FIREBASE
-========================================================= */
+========================================== */
 
 const app =
     initializeApp(
@@ -3037,300 +1691,32 @@ const db =
     );
 
 
-/* =========================================================
-   DEFAULT DOGS
-========================================================= */
-
-const defaultDogs = [
-
-{
-    id: "1",
-
-    name: "Max",
-
-    breed: "French Bulldog",
-
-    status: "lost",
-
-    area: "Equipetrol",
-
-    date: "2026-08-15",
-
-    location:
-        "Near Equipetrol Plaza",
-
-    description:
-        "Small brown dog with a blue collar. Friendly but may be scared around strangers.",
-
-    contactName:
-        "Andrea",
-
-    phone:
-        "+591 70012345"
-},
-
-
-{
-    id: "2",
-
-    name: "Luna",
-
-    breed: "Beagle",
-
-    status: "found",
-
-    area: "Urubó",
-
-    date: "2026-08-16",
-
-    location:
-        "Residential area in Urubó",
-
-    description:
-        "White and brown female dog with a pink collar. Calm and affectionate.",
-
-    contactName:
-        "Carlos",
-
-    phone:
-        "+591 70123456"
-},
-
-
-{
-    id: "3",
-
-    name: "Rocky",
-
-    breed: "Siberian Husky",
-
-    status: "lost",
-
-    area: "Sirari",
-
-    date: "2026-08-14",
-
-    location:
-        "Near Sirari Park",
-
-    description:
-        "Medium-sized black and white dog with a red collar.",
-
-    contactName:
-        "María",
-
-    phone:
-        "+591 70234567"
-},
-
-
-{
-    id: "4",
-
-    name: "Toby",
-
-    breed: "Golden Retriever",
-
-    status: "found",
-
-    area: "Plan 3000",
-
-    date: "2026-08-13",
-
-    location:
-        "Main avenue",
-
-    description:
-        "Golden dog with a green collar. Calm and friendly.",
-
-    contactName:
-        "Luis",
-
-    phone:
-        "+591 70345678"
-},
-
-
-{
-    id: "5",
-
-    name: "Coco",
-
-    breed: "Maltese",
-
-    status: "lost",
-
-    area: "Equipetrol",
-
-    date: "2026-08-12",
-
-    location:
-        "Near a shopping area",
-
-    description:
-        "Small white dog with light brown spots.",
-
-    contactName:
-        "Sofía",
-
-    phone:
-        "+591 70456789"
-},
-
-
-{
-    id: "6",
-
-    name: "Bella",
-
-    breed: "Cocker Spaniel",
-
-    status: "found",
-
-    area: "Sirari",
-
-    date: "2026-08-11",
-
-    location:
-        "Neighborhood park",
-
-    description:
-        "Medium-sized brown female dog with a pink collar.",
-
-    contactName:
-        "Diego",
-
-    phone:
-        "+591 70567890"
-}
-
-];
-
-
-let dogs =
-    [...defaultDogs];
-
-
-let selectedStatus =
-    "all";
-
-
-let selectedArea =
-    "all";
-
-
-let searchText =
-    "";
-
-
-/* =========================================================
-   ELEMENTS
-========================================================= */
-
-const recentDogs =
-    document.getElementById(
-        "recentDogs"
+const storage =
+    getStorage(
+        app
     );
 
 
-const dogGrid =
-    document.getElementById(
-        "dogGrid"
-    );
+/* ==========================================
+   VARIABLES
+========================================== */
+
+let dogs = [];
 
 
-const searchInput =
-    document.getElementById(
-        "searchInput"
-    );
-
-
-const areaFilter =
-    document.getElementById(
-        "areaFilter"
-    );
-
-
-const resultsCount =
-    document.getElementById(
-        "resultsCount"
-    );
-
-
-const formStatus =
-    document.getElementById(
-        "formStatus"
-    );
-
-
-/* =========================================================
-   LOAD DOGS FROM FIREBASE
-========================================================= */
-
-async function loadDogsFromFirebase() {
-
-    try {
-
-        const snapshot =
-            await getDocs(
-                collection(
-                    db,
-                    "dogs"
-                )
-            );
-
-
-        const firebaseDogs =
-            snapshot.docs.map(
-                doc => ({
-
-                    id:
-                        doc.id,
-
-                    ...doc.data()
-
-                })
-            );
-
-
-        dogs = [
-
-            ...defaultDogs,
-
-            ...firebaseDogs
-
-        ];
-
-
-        renderRecent();
-
-        renderDogs();
-
-
-    } catch (error) {
-
-        console.error(
-            "Error loading dogs:",
-            error
-        );
-
-    }
-
-}
-
-
-/* =========================================================
+/* ==========================================
    PAGE NAVIGATION
-========================================================= */
+========================================== */
 
-function showPage(page) {
+function showPage(pageName) {
+
 
     document
         .querySelectorAll(".page")
         .forEach(
-            section => {
+            page => {
 
-                section.classList.remove(
+                page.classList.remove(
                     "active"
                 );
 
@@ -3338,39 +1724,23 @@ function showPage(page) {
         );
 
 
-    const target =
-        document.getElementById(
-            page + "Page"
-        );
-
-
-    if (target) {
-
-        target.classList.add(
+    document
+        .getElementById(
+            pageName + "Page"
+        )
+        .classList.add(
             "active"
         );
-
-    }
 
 
     window.scrollTo({
 
-        top:
-            0,
+        top: 0,
 
-        behavior:
-            "smooth"
+        behavior: "smooth"
 
     });
 
-
-    document
-        .getElementById(
-            "navLinks"
-        )
-        .classList.remove(
-            "open"
-        );
 
 }
 
@@ -3379,47 +1749,190 @@ window.showPage =
     showPage;
 
 
-/* =========================================================
-   HOW
-========================================================= */
+/* ==========================================
+   IMAGE PREVIEW
+========================================== */
 
-function goHow() {
-
-    showPage(
-        "home"
+const imageInput =
+    document.getElementById(
+        "imageInput"
     );
 
 
-    setTimeout(
-        () => {
-
-            document
-                .getElementById(
-                    "howSection"
-                )
-                .scrollIntoView({
-
-                    behavior:
-                        "smooth"
-
-                });
-
-        },
-        150
+const imagePreview =
+    document.getElementById(
+        "imagePreview"
     );
+
+
+imageInput.addEventListener(
+
+    "change",
+
+    function() {
+
+
+        const file =
+            this.files[0];
+
+
+        if (!file) {
+
+            imagePreview.style.display =
+                "none";
+
+            return;
+
+        }
+
+
+        const reader =
+            new FileReader();
+
+
+        reader.onload =
+            function(event) {
+
+                imagePreview.src =
+                    event.target.result;
+
+
+                imagePreview.style.display =
+                    "block";
+
+            };
+
+
+        reader.readAsDataURL(
+            file
+        );
+
+    }
+
+);
+
+
+/* ==========================================
+   LOAD DOGS FROM FIRESTORE
+========================================== */
+
+async function loadDogs() {
+
+
+    try {
+
+
+        const dogsCollection =
+            collection(
+                db,
+                "dogs"
+            );
+
+
+        let snapshot;
+
+
+        try {
+
+            const dogsQuery =
+
+                query(
+
+                    dogsCollection,
+
+                    orderBy(
+                        "createdAt",
+                        "desc"
+                    )
+
+                );
+
+
+            snapshot =
+                await getDocs(
+                    dogsQuery
+                );
+
+        }
+
+
+        catch (error) {
+
+
+            /* If ordering fails because old
+               documents don't have createdAt */
+
+            snapshot =
+                await getDocs(
+                    dogsCollection
+                );
+
+        }
+
+
+        dogs =
+            snapshot.docs.map(
+
+                document => ({
+
+                    id:
+                        document.id,
+
+                    ...document.data()
+
+                })
+
+            );
+
+
+        renderDogs();
+
+
+    }
+
+
+    catch (error) {
+
+
+        console.error(
+            "Error loading dogs:",
+            error
+        );
+
+
+        document
+            .getElementById(
+                "dogGrid"
+            )
+            .innerHTML = `
+
+                <div class="empty">
+
+                    <h2>
+                        Unable to load reports.
+                    </h2>
+
+                    <p>
+                        Check your Firebase
+                        Firestore rules.
+                    </p>
+
+                </div>
+
+            `;
+
+    }
+
 
 }
 
 
-window.goHow =
-    goHow;
-
-
-/* =========================================================
-   DATE
-========================================================= */
+/* ==========================================
+   FORMAT DATE
+========================================== */
 
 function formatDate(date) {
+
 
     if (!date) {
 
@@ -3428,319 +1941,299 @@ function formatDate(date) {
     }
 
 
-    return new Date(date)
-        .toLocaleDateString(
+    return new Date(
+        date + "T12:00:00"
+    )
+    .toLocaleDateString(
 
-            "en-US",
+        "en-US",
 
-            {
+        {
 
-                year:
-                    "numeric",
+            year: "numeric",
 
-                month:
-                    "short",
+            month: "short",
 
-                day:
-                    "numeric"
-
-            }
-
-        );
-
-}
-
-
-/* =========================================================
-   DOG CARD
-========================================================= */
-
-function dogCard(dog) {
-
-    return `
-
-<article class="dog-card">
-
-<div class="dog-card-body">
-
-
-<div class="card-top">
-
-<h3>
-    ${dog.name || "Unknown Dog"}
-</h3>
-
-
-<span class="badge ${dog.status}">
-
-${
-    dog.status === "lost"
-        ? "LOST"
-        : "FOUND"
-}
-
-</span>
-
-</div>
-
-
-
-<div class="meta">
-
-📍 ${dog.area}
-
-</div>
-
-
-
-<div class="breed-info">
-
-<span class="breed-label">
-    BREED
-</span>
-
-
-<span class="breed-name">
-
-${dog.breed || "Mixed Breed"}
-
-</span>
-
-</div>
-
-
-
-<p class="dog-description">
-
-${dog.description || ""}
-
-</p>
-
-
-
-<div class="card-footer">
-
-<span class="date">
-
-${formatDate(dog.date)}
-
-</span>
-
-
-<button
-    class="text-link"
-    onclick="openDetails('${dog.id}')"
->
-
-View Details →
-
-</button>
-
-</div>
-
-
-</div>
-
-</article>
-
-`;
-
-}
-
-
-/* =========================================================
-   EMPTY
-========================================================= */
-
-function emptyState() {
-
-    return `
-
-<div class="empty-state">
-
-<div class="empty-state-icon">
-    🐕
-</div>
-
-<h3>
-    No dogs found
-</h3>
-
-<p>
-    Try changing your search or filters.
-</p>
-
-</div>
-
-`;
-
-}
-
-
-/* =========================================================
-   RECENT
-========================================================= */
-
-function renderRecent() {
-
-    const recent =
-        dogs
-            .slice()
-            .sort(
-                (a, b) =>
-                    new Date(b.date) -
-                    new Date(a.date)
-            )
-            .slice(0, 3);
-
-
-    recentDogs.innerHTML =
-        recent
-            .map(
-                dogCard
-            )
-            .join("");
-
-}
-
-
-/* =========================================================
-   FILTER
-========================================================= */
-
-function filteredDogs() {
-
-    return dogs.filter(
-        dog => {
-
-            const statusOK =
-
-                selectedStatus === "all"
-
-                ||
-
-                dog.status ===
-                selectedStatus;
-
-
-            const areaOK =
-
-                selectedArea === "all"
-
-                ||
-
-                dog.area ===
-                selectedArea;
-
-
-            const searchableText =
-
-                (
-
-                    (dog.name || "") +
-
-                    " " +
-
-                    (dog.breed || "") +
-
-                    " " +
-
-                    (dog.description || "") +
-
-                    " " +
-
-                    (dog.area || "") +
-
-                    " " +
-
-                    (dog.location || "")
-
-                ).toLowerCase();
-
-
-            const searchOK =
-
-                searchableText.includes(
-
-                    searchText.toLowerCase()
-
-                );
-
-
-            return (
-
-                statusOK
-
-                &&
-
-                areaOK
-
-                &&
-
-                searchOK
-
-            );
+            day: "numeric"
 
         }
+
     );
+
 
 }
 
 
-/* =========================================================
+/* ==========================================
    RENDER DOGS
-========================================================= */
+========================================== */
 
 function renderDogs() {
 
-    const filtered =
-        filteredDogs();
+
+    const dogGrid =
+        document.getElementById(
+            "dogGrid"
+        );
+
+
+    const search =
+        document
+            .getElementById(
+                "searchInput"
+            )
+            .value
+            .toLowerCase();
+
+
+    const status =
+        document
+            .getElementById(
+                "statusFilter"
+            )
+            .value;
+
+
+    const area =
+        document
+            .getElementById(
+                "areaFilter"
+            )
+            .value;
+
+
+    const filteredDogs =
+        dogs.filter(
+            dog => {
+
+
+                const searchText =
+
+                    [
+
+                        dog.name,
+
+                        dog.breed,
+
+                        dog.description,
+
+                        dog.area,
+
+                        dog.location
+
+                    ]
+
+                    .join(" ")
+
+                    .toLowerCase();
+
+
+                const matchesSearch =
+                    searchText.includes(
+                        search
+                    );
+
+
+                const matchesStatus =
+
+                    status === "all"
+
+                    ||
+
+                    dog.status ===
+                    status;
+
+
+                const matchesArea =
+
+                    area === "all"
+
+                    ||
+
+                    dog.area ===
+                    area;
+
+
+                return
+
+                    matchesSearch
+
+                    &&
+
+                    matchesStatus
+
+                    &&
+
+                    matchesArea;
+
+            }
+        );
 
 
     if (
-        filtered.length === 0
+
+        filteredDogs.length === 0
+
     ) {
 
-        dogGrid.innerHTML =
-            emptyState();
+
+        dogGrid.innerHTML = `
+
+            <div class="empty">
+
+                <h2>
+                    🐾 No dogs found
+                </h2>
+
+                <p>
+                    Try changing your search
+                    or filters.
+                </p>
+
+            </div>
+
+        `;
+
+
+        return;
 
     }
 
-    else {
 
-        dogGrid.innerHTML =
+    dogGrid.innerHTML =
+        filteredDogs
 
-            filtered
-                .map(
-                    dogCard
-                )
-                .join("");
-
-    }
+        .map(
+            dog => `
 
 
-    resultsCount.textContent =
+            <article class="dog-card">
 
-        `${filtered.length} ${
-            filtered.length === 1
-                ? "report"
-                : "reports"
-        }`;
+
+                <img
+
+                    class="dog-card-image"
+
+                    src="${dog.imageURL}"
+
+                    alt="${dog.name || "Dog"}"
+
+                    onerror="this.style.display='none'"
+
+                >
+
+
+                <div class="dog-card-body">
+
+
+                    <div class="dog-card-top">
+
+
+                        <h3>
+
+                            ${dog.name || "Unknown Dog"}
+
+                        </h3>
+
+
+                        <span
+
+                            class="badge ${dog.status}"
+
+                        >
+
+                            ${dog.status.toUpperCase()}
+
+                        </span>
+
+
+                    </div>
+
+
+                    <div class="dog-info">
+
+
+                        <strong>
+                            Breed:
+                        </strong>
+
+                        ${dog.breed || "Unknown"}
+
+
+                        <br>
+
+
+                        <strong>
+                            Area:
+                        </strong>
+
+                        📍 ${dog.area}
+
+
+                        <br>
+
+
+                        <strong>
+                            Date:
+                        </strong>
+
+                        ${formatDate(dog.date)}
+
+
+                    </div>
+
+
+                    <div class="dog-actions">
+
+
+                        <span>
+
+                            🐾 Report
+
+                        </span>
+
+
+                        <button
+
+                            class="view-button"
+
+                            onclick="openDetails('${dog.id}')"
+
+                        >
+
+                            View Details →
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+
+            `
+
+        )
+
+        .join("");
 
 }
 
 
-/* =========================================================
-   DETAILS
-========================================================= */
+/* ==========================================
+   OPEN DETAILS
+========================================== */
 
-function openDetails(id) {
+async function openDetails(id) {
+
 
     const dog =
         dogs.find(
-            dog =>
-                String(dog.id) ===
-                String(id)
+            dog => dog.id === id
         );
 
 
@@ -3753,126 +2246,150 @@ function openDetails(id) {
 
     document
         .getElementById(
-            "detailsBox"
+            "detailsContainer"
         )
         .innerHTML = `
 
-<div class="details-info">
+
+        <div class="details-card">
 
 
-<span class="badge ${dog.status}">
+            <img
 
-${
-    dog.status === "lost"
-        ? "LOST"
-        : "FOUND"
-}
+                class="details-image"
 
-</span>
+                src="${dog.imageURL}"
 
+                alt="${dog.name || "Dog"}"
 
-<h1>
-
-${dog.name}
-
-</h1>
+            >
 
 
-<div class="detail-item">
-
-<strong>
-Area
-</strong>
-
-📍 ${dog.area}
-
-</div>
+            <div class="details-content">
 
 
-<div class="detail-item">
+                <span
 
-<strong>
-Breed
-</strong>
+                    class="badge ${dog.status}"
 
-${dog.breed || "Mixed Breed"}
+                >
 
-</div>
+                    ${dog.status.toUpperCase()}
 
-
-<div class="detail-item">
-
-<strong>
-Date
-</strong>
-
-${formatDate(dog.date)}
-
-</div>
+                </span>
 
 
-<div class="detail-item">
+                <h1>
 
-<strong>
-Last Seen / Found
-</strong>
+                    ${dog.name || "Unknown Dog"}
 
-${dog.location}
-
-</div>
+                </h1>
 
 
-<div class="detail-item">
+                <div class="detail-row">
 
-<strong>
-Description
-</strong>
+                    <strong>
+                        BREED
+                    </strong>
 
-${dog.description}
+                    ${dog.breed || "Unknown"}
 
-</div>
-
-
-<div class="detail-item">
-
-<strong>
-Contact
-</strong>
-
-${dog.contactName}
-
-<br>
-
-${dog.phone}
-
-</div>
+                </div>
 
 
-<br>
+                <div class="detail-row">
+
+                    <strong>
+                        AREA
+                    </strong>
+
+                    📍 ${dog.area}
+
+                </div>
 
 
-<a
-    class="btn btn-primary"
-    href="tel:${dog.phone}"
-    style="
-        text-decoration:none;
-        display:inline-block;
-    "
->
+                <div class="detail-row">
 
-📞 Contact
+                    <strong>
+                        DATE
+                    </strong>
 
-</a>
+                    ${formatDate(dog.date)}
+
+                </div>
 
 
-</div>
+                <div class="detail-row">
 
-`;
+                    <strong>
+                        LOCATION
+                    </strong>
+
+                    ${dog.location}
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <strong>
+                        DESCRIPTION
+                    </strong>
+
+                    ${dog.description}
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <strong>
+                        CONTACT
+                    </strong>
+
+                    ${dog.contactName}
+
+                    <br>
+
+                    📞 ${dog.phone}
+
+                </div>
+
+
+                <br>
+
+
+                <a
+
+                    class="btn btn-primary"
+
+                    href="tel:${dog.phone}"
+
+                    style="
+                        display:inline-block;
+                        text-decoration:none;
+                    "
+
+                >
+
+                    📞 Contact
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+        `;
 
 
     showPage(
         "details"
     );
+
 
 }
 
@@ -3881,195 +2398,52 @@ window.openDetails =
     openDetails;
 
 
-/* =========================================================
-   CLEAR FILTERS
-========================================================= */
-
-function clearFilters() {
-
-    selectedStatus =
-        "all";
-
-    selectedArea =
-        "all";
-
-    searchText =
-        "";
-
-
-    searchInput.value =
-        "";
-
-    areaFilter.value =
-        "all";
-
-
-    document
-        .querySelectorAll(
-            ".filter-btn"
-        )
-        .forEach(
-            button => {
-
-                button.classList.remove(
-                    "active"
-                );
-
-            }
-        );
-
-
-    document
-        .querySelector(
-            '[data-status="all"]'
-        )
-        .classList.add(
-            "active"
-        );
-
-
-    renderDogs();
-
-}
-
-
-window.clearFilters =
-    clearFilters;
-
-
-/* =========================================================
-   REPORT STATUS
-========================================================= */
-
-function openReportWithStatus(status) {
-
-    showPage(
-        "report"
-    );
-
-
-    setTimeout(
-        () => {
-
-            const radio =
-                document.querySelector(
-                    `input[value="${status}"]`
-                );
-
-
-            if (radio) {
-
-                radio.checked =
-                    true;
-
-            }
-
-        },
-        100
-    );
-
-}
-
-
-window.openReportWithStatus =
-    openReportWithStatus;
-
-
-/* =========================================================
-   SEARCH
-========================================================= */
-
-searchInput.addEventListener(
-
-    "input",
-
-    function(event) {
-
-        searchText =
-            event.target.value.trim();
-
-        renderDogs();
-
-    }
-
-);
-
-
-/* =========================================================
-   AREA FILTER
-========================================================= */
-
-areaFilter.addEventListener(
-
-    "change",
-
-    function(event) {
-
-        selectedArea =
-            event.target.value;
-
-        renderDogs();
-
-    }
-
-);
-
-
-/* =========================================================
-   STATUS FILTER
-========================================================= */
+/* ==========================================
+   FILTER EVENTS
+========================================== */
 
 document
-    .querySelectorAll(
-        ".filter-btn"
+    .getElementById(
+        "searchInput"
     )
-    .forEach(
-        button => {
+    .addEventListener(
 
-            button.addEventListener(
+        "input",
 
-                "click",
+        renderDogs
 
-                function() {
-
-                    selectedStatus =
-                        this.dataset.status;
-
-
-                    document
-                        .querySelectorAll(
-                            ".filter-btn"
-                        )
-                        .forEach(
-                            btn => {
-
-                                btn.classList.remove(
-                                    "active"
-                                );
-
-                            }
-                        );
-
-
-                    this.classList.add(
-                        "active"
-                    );
-
-
-                    renderDogs();
-
-                }
-
-            );
-
-        }
     );
 
 
-/* =========================================================
-   REPORT FORM
-   SAVE TO FIREBASE
-========================================================= */
+document
+    .getElementById(
+        "statusFilter"
+    )
+    .addEventListener(
+
+        "change",
+
+        renderDogs
+
+    );
+
+
+document
+    .getElementById(
+        "areaFilter"
+    )
+    .addEventListener(
+
+        "change",
+
+        renderDogs
+
+    );
+
+
+/* ==========================================
+   SUBMIT REPORT
+========================================== */
 
 document
     .getElementById(
@@ -4081,12 +2455,19 @@ document
 
         async function(event) {
 
+
             event.preventDefault();
 
 
             const submitButton =
-                this.querySelector(
-                    'button[type="submit"]'
+                document.getElementById(
+                    "submitButton"
+                );
+
+
+            const formStatus =
+                document.getElementById(
+                    "formStatus"
                 );
 
 
@@ -4096,108 +2477,66 @@ document
                 );
 
 
-            const newDog = {
-
-                name:
-                    formData
-                        .get("name")
-                        .trim()
-                    ||
-                    "Unknown Dog",
+            const imageFile =
+                imageInput.files[0];
 
 
-                breed:
-                    formData
-                        .get("breed")
-                        .trim()
-                    ||
-                    "Mixed Breed",
+            if (!imageFile) {
 
-
-                status:
-                    formData.get(
-                        "status"
-                    ),
-
-
-                area:
-                    formData.get(
-                        "area"
-                    ),
-
-
-                date:
-                    formData.get(
-                        "date"
-                    ),
-
-
-                location:
-                    formData
-                        .get("location")
-                        .trim(),
-
-
-                description:
-                    formData
-                        .get("description")
-                        .trim(),
-
-
-                contactName:
-                    formData
-                        .get("contactName")
-                        .trim(),
-
-
-                phone:
-                    formData
-                        .get("phone")
-                        .trim(),
-
-
-                createdAt:
-                    serverTimestamp()
-
-            };
-
-
-            if (
-
-                !newDog.status
-
-                ||
-
-                !newDog.area
-
-                ||
-
-                !newDog.date
-
-                ||
-
-                !newDog.location
-
-                ||
-
-                !newDog.description
-
-                ||
-
-                !newDog.contactName
-
-                ||
-
-                !newDog.phone
-
-            ) {
 
                 formStatus.textContent =
-                    "Please complete all required fields.";
+                    "Please select an image.";
 
 
                 formStatus.className =
-                    "form-error";
+                    "form-status error";
+
+
+                return;
+
+            }
+
+
+            /* Maximum 10 MB */
+
+            if (
+
+                imageFile.size >
+                10 * 1024 * 1024
+
+            ) {
+
+
+                formStatus.textContent =
+                    "The image must be smaller than 10 MB.";
+
+
+                formStatus.className =
+                    "form-status error";
+
+
+                return;
+
+            }
+
+
+            /* Check image */
+
+            if (
+
+                !imageFile.type.startsWith(
+                    "image/"
+                )
+
+            ) {
+
+
+                formStatus.textContent =
+                    "Please upload a valid image file.";
+
+
+                formStatus.className =
+                    "form-status error";
 
 
                 return;
@@ -4207,8 +2546,87 @@ document
 
             try {
 
+
                 submitButton.disabled =
                     true;
+
+
+                submitButton.textContent =
+                    "Uploading Image...";
+
+
+                formStatus.textContent =
+                    "Uploading image to Firebase...";
+
+
+                formStatus.className =
+                    "form-status";
+
+
+                /* ==================================
+                   CREATE UNIQUE IMAGE NAME
+                ================================== */
+
+                const uniqueFileName =
+
+                    Date.now()
+
+                    +
+
+                    "-"
+
+                    +
+
+                    crypto.randomUUID()
+
+                    +
+
+                    "-"
+
+                    +
+
+                    imageFile.name;
+
+
+                /* ==================================
+                   STORAGE LOCATION
+                ================================== */
+
+                const storageReference =
+
+                    ref(
+
+                        storage,
+
+                        `pet-images/${uniqueFileName}`
+
+                    );
+
+
+                /* ==================================
+                   UPLOAD IMAGE
+                ================================== */
+
+                await uploadBytes(
+
+                    storageReference,
+
+                    imageFile
+
+                );
+
+
+                /* ==================================
+                   GET IMAGE URL
+                ================================== */
+
+                const imageURL =
+
+                    await getDownloadURL(
+
+                        storageReference
+
+                    );
 
 
                 submitButton.textContent =
@@ -4216,18 +2634,110 @@ document
 
 
                 formStatus.textContent =
-                    "Saving your report...";
+                    "Saving report to Firebase...";
 
 
-                formStatus.className =
-                    "";
+                /* ==================================
+                   CREATE DOG REPORT
+                ================================== */
+
+                const newDog = {
 
 
-                /* =============================================
-                   THIS SAVES THE DOG PERMANENTLY TO FIREBASE
-                ============================================= */
+                    name:
 
-                const docRef =
+                        formData
+                            .get("name")
+                            .trim()
+
+                        ||
+
+                        "Unknown Dog",
+
+
+                    breed:
+
+                        formData
+                            .get("breed")
+                            .trim()
+
+                        ||
+
+                        "Unknown Breed",
+
+
+                    status:
+
+                        formData.get(
+                            "status"
+                        ),
+
+
+                    area:
+
+                        formData.get(
+                            "area"
+                        ),
+
+
+                    date:
+
+                        formData.get(
+                            "date"
+                        ),
+
+
+                    location:
+
+                        formData
+                            .get("location")
+                            .trim(),
+
+
+                    description:
+
+                        formData
+                            .get("description")
+                            .trim(),
+
+
+                    contactName:
+
+                        formData
+                            .get("contactName")
+                            .trim(),
+
+
+                    phone:
+
+                        formData
+                            .get("phone")
+                            .trim(),
+
+
+                    imageURL:
+
+                        imageURL,
+
+
+                    imagePath:
+
+                        `pet-images/${uniqueFileName}`,
+
+
+                    createdAt:
+
+                        serverTimestamp()
+
+                };
+
+
+                /* ==================================
+                   SAVE TO FIRESTORE
+                ================================== */
+
+                const documentReference =
+
                     await addDoc(
 
                         collection(
@@ -4240,123 +2750,116 @@ document
                     );
 
 
-                /* =============================================
-                   ADD TO PAGE IMMEDIATELY
-                ============================================= */
+                /* ==================================
+                   ADD TO LOCAL LIST
+                ================================== */
 
                 dogs.unshift({
 
                     ...newDog,
 
                     id:
-                        docRef.id
+                        documentReference.id
 
                 });
 
 
-                renderRecent();
-
                 renderDogs();
 
 
+                /* ==================================
+                   SUCCESS
+                ================================== */
+
                 formStatus.textContent =
-                    "Thank you! Your report has been saved successfully.";
+
+                    "🐶 Report saved successfully!";
 
 
                 formStatus.className =
-                    "form-success";
+
+                    "form-status success";
 
 
                 this.reset();
 
 
+                imagePreview.style.display =
+                    "none";
+
+
+                /* Go to search page */
+
                 setTimeout(
+
                     () => {
 
                         showPage(
                             "find"
                         );
 
+
                     },
+
                     1200
+
                 );
 
 
-            } catch (error) {
+            }
+
+
+            catch (error) {
+
 
                 console.error(
+                    "Firebase Error:",
                     error
                 );
 
 
                 formStatus.textContent =
-                    "Error saving the report. Please check Firebase Firestore.";
+
+                    "Error saving report: "
+
+                    +
+
+                    error.message;
 
 
                 formStatus.className =
-                    "form-error";
+
+                    "form-status error";
+
 
             }
 
 
             finally {
 
+
                 submitButton.disabled =
                     false;
 
 
                 submitButton.textContent =
+
                     "Submit Report";
+
 
             }
 
-        }
-
-    );
-
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-document
-    .getElementById(
-        "menuBtn"
-    )
-    .addEventListener(
-
-        "click",
-
-        function() {
-
-            document
-                .getElementById(
-                    "navLinks"
-                )
-                .classList.toggle(
-                    "open"
-                );
 
         }
 
     );
 
 
-/* =========================================================
-   INITIALIZE
-========================================================= */
+/* ==========================================
+   LOAD DATA WHEN WEBSITE STARTS
+========================================== */
 
-renderRecent();
-
-renderDogs();
-
-
-/* =============================================
-   LOAD ALL SAVED DOGS WHEN PAGE OPENS
-   THIS IS WHY THEY DO NOT DISAPPEAR AFTER REFRESH
-============================================= */
-
-loadDogsFromFirebase();
+loadDogs();
 
 
 </script>
